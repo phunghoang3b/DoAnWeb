@@ -134,78 +134,168 @@
         @RenderBody()
         <!-- end post -->
         <!-- footer -->
-        <div class="row backroud">
-            <div class="col-md-5">
-                <h4 class="footer-heading">
-                    Về chúng tôi
-                </h4>
-                <div class="footer__top-intro-content">
-                    Dophuot365.com là hệ thống chuyên cung cấp những
-                    phụ kiện, thiết bị cần thiết cho các bạn đam mê
-                    phượt trên khắp cả nước.Chúng tôi sẽ liên tục cập
-                    nhật những sản phẩm mới nhất, chất lượng nhất,
-                    hợp thời nhất giúp các bạn có những trải nghiệm
-                    tuyệt vời! <br> <br>
-                    Điện thoại: 0352 860 701 <br>
-                    Email: dophuot365@gmail.com <br>
-                    Zalo: 0352 860 701 <br>
+        <footer>
+            <div class="container">
+                <div class="sec aboutus">
+                    <h2>About Us</h2>
+                    <p>
+                        Mimigame Shop - Gameshop for Gamer
+                        Được thành lập vào những năm đầu thập niên 90, Mimigame shop đã gắn liền trong ký ức tuổi thơ biết bao thế hệ game thủ Việt Nam.
+                        Shop chuyên kinh doanh dòng sản phẩm máy game lẫn phụ kiện từ Playstation, Nintendo, Xbox...
+                    </p>
+                    <ul class="sci">
+                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube-square"></i></a></li>
+                    </ul>
+                </div>
+                <div class="sec quickLinks">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+                <div class="sec contact">
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                        <li>
+                            <span><i class="fas fa-map-signs"></i></span>
+                            <span>
+                                647 Linda Street<br />
+                                Phoenixville, Pa 19460, <br />USA
+                            </span>
+                        </li>
+                        <li>
+                            <span><i class="fas fa-phone"></i></span>
+                            <p>
+                                <a href="tel:1234567890">+1 234 567 8900</a><br />
+                                <a href="tel:1234567890">+1 234 567 8900</a></p>
+                        </li>
+                        <li>
+                            <span><i class="fas fa-envelope-open-text"></i></span>
+                            <p><a href="mailto:knowmore@gmail.com">nguyenhoangkhai@gmail.com</a></p>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-md-3">
-                <h4 class="footer__top-policy-heading">
-                    Chính sách mua hàng
-                </h4>
-
-                <ul class="footer__top-policy-list">
-                    <li class="footer__top-policy-item">
-                        <a href="#" class="footer__top-policy-link">Hình thức đặt hàng</a>
-                    </li>
-                    <li class="footer__top-policy-item">
-                        <a href="#" class="footer__top-policy-link">Hình thức thanh toán</a>
-                    </li>
-                    <li class="footer__top-policy-item">
-                        <a href="#" class="footer__top-policy-link">Phương thức vận chuyển</a>
-                    </li>
-                    <li class="footer__top-policy-item">
-                        <a href="#" class="footer__top-policy-link">Chính sách đổi trả</a>
-                    </li>
-                    <li class="footer__top-policy-item">
-                        <a href="#" class="footer__top-policy-link">Hướng dẫ sử dụng</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h4 class="footer-heading">
-                    Hotline liên hệ
-                </h4>
-                <div class="footer__top-contact">
-                    <div class="footer__top-contact-icon">
-                        <img src="~/Content/images/phone_top.png" class="footer__top-contact-img">
-                    </div>
-
-                    <div class="footer__top-contact-phone-wrap">
-                        <div class="footer__top-contact-phone">
-                            0352.860.701
-                        </div>
-                        <div class="footer__top-contact-des">
-                            (Tư vấn miễn phí 24/24)
-                        </div>
-                    </div>
-                </div>
-                <h4 class="footer__top-contact-heading">
-                    Kết nối với chúng tôi
-                </h4>
-                <img class="footer__top-contact-social-link" src="~/Content/images/facebook.png">
-                <img class="footer__top-contact-social-link" src="~/Content/images/youtube.png">
-                <img class="footer__top-contact-social-link" src="~/Content/images/tiktok.png">
-                <img class="footer__top-contact-social-link" src="~/Content/images/zalo.png">
-            </div>
-        </div>
+        </footer>
         <div class="row">
             <div class="col-md-12 footer__bottom">
                 <span class="footer__bottom-content">Bản quyền thuộc về Dophuot365.com | Thiết kế bởi Thành Long</span>
             </div>
         </div>
+        <style>
+            footer{
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 50px 100px;
+                background:#111;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            footer .container {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+            footer .container .sec{
+                margin-right: 30px;
+            }
+            footer .container .sec.aboutus{
+                width: 30%;
+            }
+            footer .container h2{
+                padding-left: 16%;
+                color: #fff;
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+            footer .container h2:before{
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 40px;
+                height: 2px;
+            }
+            footer p{
+                color: #999;
+            }
+            .sci{
+                margin-top: 20px;
+                display: flex;
+            }
+            .sci li{
+                list-style: none;
+            }
+            .sci li a{
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                background: #222;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 10px;
+                text-decoration: none;
+                border-radius: 4px;
+            }
+            .sci li a:hover{
+                background: #f00;
+            }
+            .sci li a .fa{
+                color: #fff;
+                font-size: 20px;
+            }
+            .quickLinks{
+                position: relative;
+                width: 25%;
+            }
+            .quickLinks ul li{
+                list-style: none;
+            }
+            .quickLinks ul li a{
+                color: #999;
+                text-decoration: none;
+                margin-bottom: 10px;
+                display: inline-block;
+            }
+            .quickLinks ul li a:hover{
+                color: #fff;
+            }
+            .contact{
+                width: calc(35% - 60px);
+                margin-right: 0 !important;
+            }
+            .contact .info li{
+                display: flex;
+                margin-bottom: 16px;
+            }
+            .contact .info li span:nth-child(1)
+            {
+                color: #fff;
+                font-size: 20px;
+                margin-right: 10px;
+            }
+            .contact .info li span{
+                color: #999;
+            }
+            .contact .info li a{
+                color: #999;
+                text-decoration: none;
+            }
+            .contact .info li a:hover{
+                color: #fff;
+            }
+        </style>
         <!-- end footer -->
     </div>
     <!-- end container -->

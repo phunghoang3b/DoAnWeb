@@ -1780,13 +1780,13 @@
     <Content Include="Content\images\banner7.jpg" />
     <Content Include="Content\images\banner8.jpg" />
     <Content Include="Content\images\banner9.jpg" />
-    <Content Include="Content\images\banner_5.jpg" />
-    <Content Include="Content\images\banner_6.jpg" />
-    <Content Include="Content\images\banner_7.jpg" />
     <Content Include="Content\images\bell1.png" />
     <Content Include="Content\images\bestselling.png" />
-    <Content Include="Content\images\bg_sale_off.jpg" />
+    <Content Include="Content\images\blog1.jpg" />
+    <Content Include="Content\images\blog2.jpg" />
+    <Content Include="Content\images\blog3.jpg" />
     <Content Include="Content\images\brand.png" />
+    <Content Include="Content\images\driving.jpg" />
     <Content Include="Content\images\EA.jpg" />
     <Content Include="Content\images\facebook.png" />
     <Content Include="Content\images\favicon.ico" />
@@ -1803,9 +1803,6 @@
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\images\newilove.jpg" />
     <Content Include="Content\images\phone_top.png" />
-    <Content Include="Content\images\post_1.jpg" />
-    <Content Include="Content\images\post_2.jpg" />
-    <Content Include="Content\images\post_3.jpg" />
     <Content Include="Content\images\pro1.jpg" />
     <Content Include="Content\images\pro2.jpg" />
     <Content Include="Content\images\pro3.jpg" />
