@@ -2,6 +2,124 @@
     ViewBag.Title = "Home Page";
 }
 
+<!-- Popup start -->
+<div class="login-popup">
+    <div class="box">
+        <div class="img-area">
+            <div class="img">
+            </div>
+        </div>
+        <div class="form">
+            <div class="close">&times;</div>
+            <div class="content">
+                <div>
+                    <h3>CHUNG TAY PHÒNG CHỐNG</h3><br>
+                    <h2>
+                        DỊCH COVID-19<br>
+                        ------------------
+                    </h2>
+                    <p>
+                        GameStoreK3T chuyển sang hoạt động bán hàng trực tuyến
+                        từ ngày 20/06.<br>
+                        Hotline hỗ trợ: 0374 412 199
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .login-popup{
+	    position: fixed;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	    z-index: 1099;
+	    background-color:rgba(0,0,0,0.6);
+	    visibility: hidden;
+	    opacity: 0;
+	    transition: all 1s ease;
+    }
+    .login-popup.show{
+	    visibility:visible;
+	    opacity: 1;
+    }
+    .login-popup .box{
+	    background-color:#ffffff;
+	    width: 570px;
+	    height: 322px;
+	    position: absolute;
+	    left: 50%;
+	    top:50%;
+	    transform:translate(-50%,-50%);
+	    display: flex;
+	    flex-wrap: wrap;
+	    opacity: 0;
+	    margin-left: 50px;
+	    transition: all 1s ease;
+	    border-radius: 15px;
+    }
+    .login-popup.show .box{
+	    opacity: 1;
+	    margin-left: 0;
+    }
+    .login-popup .box .img-area{
+	    flex:0 0 50%;
+	    max-width: 50%;
+	    position: relative;
+	    overflow: hidden;
+	    padding:30px;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+    }
+    .login-popup .box .img-area h1{
+	    font-size: 30px;
+    }
+    .login-popup .box .img-area .img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 91.6%;
+        background-image: url('../../Content/images/corona.jpg');
+        background-size: cover;
+        background-position: center;
+        animation: zoomInOut 7s linear infinite;
+        z-index: -1;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+    .login-popup .box .form{
+	    flex:0 0 50%;
+	    max-width: 50%;
+	    padding:40px 30px;
+    }
+    .login-popup .box .form .close{
+	    position: absolute;
+	    right: 10px;
+	    top:0px;
+	    font-size: 30px;
+	    cursor: pointer;
+    }
+    .box .content h3{
+	    color: #333;
+	    line-height: 1em;
+	    font-weight: bold;
+	    font-size: 24px;
+	    text-align: center;
+    }
+    .box .content h2{
+	    font-size: 30px;
+	    color: #ff4d54;
+        font-weight: bold;
+    }
+    .box .content p{
+	    text-align: center;
+    }
+</style>
+<!-- Popup end -->
 <!-- menu list -->
 <div class="row backroud">
     <div class="col-md-3">
@@ -719,6 +837,7 @@
                 object-fit: contain;
                 height: 12rem;
             }
+
             .logo-brand {
                 margin-top: 25px;
                 border: 0;
@@ -729,52 +848,52 @@
     <!-- logo game end -->
 </div>
 
-    <!-- BLOG START-->
-    <div class="name-tintuc" style="font-size:30px; font-weight:bold; text-align:center; color:red;">Tin Tức</div>
-    <div class="container-blog">
-        <div class="card">
-            <div class="imgBx">
-                <img src="~/Content/images/blog1.jpg" />
-            </div>
-            <div class="content">
-                <h2>Xbox One X / S</h2>
-                <p>
-                    Các trò chơi Switch nhiều người chơi nhất tại địa phương đảm
-                    bảo hai điều: khoảng thời gian thực sự vui vẻ với bạn bè và cả
-                    những người hàng xóm thiếu ngủ nếu bạn sống trong một căn hộ
-                    hoặc gần những ngôi nhà khác.
-                </p>
-            </div>
+<!-- BLOG START-->
+<div class="name-tintuc" style="font-size:30px; font-weight:bold; text-align:center; color:red;">Tin Tức</div>
+<div class="container-blog">
+    <div class="card">
+        <div class="imgBx">
+            <img src="~/Content/images/blog1.jpg" />
         </div>
-        <div class="card">
-            <div class="imgBx">
-                <img src="~/Content/images/blog2.jpg" />
-            </div>
-            <div class="content">
-                <h2>Best PS5 games</h2>
-                <p>
-                    Cả Xbox One S và Xbox One X đều hỗ trợ HDR cho các trò chơi
-                    video hỗ trợ. Công nghệ này tối ưu hóa trình bày màu sắc, độ
-                    sáng và độ tương phản của hình ảnh cho phép nó gần giống với
-                    đời thực hơn.
-                </p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="imgBx">
-                <img src="~/Content/images/blog3.jpg" />
-            </div>
-            <div class="content">
-                <h2>Mario Supper on NTW</h2>
-                <p>
-                    Bạn đã có cho mình một chiếc PS5 đáng mơ ước? Sau đó, bạn sẽ
-                    tìm kiếm các trò chơi PS5 tốt nhất để lấp đầy thư viện của mình,
-                    May mắn thay, chúng tôi ở đây để trợ giúp.
-                </p>
-            </div>
+        <div class="content">
+            <h2>Xbox One X / S</h2>
+            <p>
+                Các trò chơi Switch nhiều người chơi nhất tại địa phương đảm
+                bảo hai điều: khoảng thời gian thực sự vui vẻ với bạn bè và cả
+                những người hàng xóm thiếu ngủ nếu bạn sống trong một căn hộ
+                hoặc gần những ngôi nhà khác.
+            </p>
         </div>
     </div>
-    <style>
+    <div class="card">
+        <div class="imgBx">
+            <img src="~/Content/images/blog2.jpg" />
+        </div>
+        <div class="content">
+            <h2>Best PS5 games</h2>
+            <p>
+                Cả Xbox One S và Xbox One X đều hỗ trợ HDR cho các trò chơi
+                video hỗ trợ. Công nghệ này tối ưu hóa trình bày màu sắc, độ
+                sáng và độ tương phản của hình ảnh cho phép nó gần giống với
+                đời thực hơn.
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="imgBx">
+            <img src="~/Content/images/blog3.jpg" />
+        </div>
+        <div class="content">
+            <h2>Mario Supper on NTW</h2>
+            <p>
+                Bạn đã có cho mình một chiếc PS5 đáng mơ ước? Sau đó, bạn sẽ
+                tìm kiếm các trò chơi PS5 tốt nhất để lấp đầy thư viện của mình,
+                May mắn thay, chúng tôi ở đây để trợ giúp.
+            </p>
+        </div>
+    </div>
+</div>
+<style>
     .container-blog {
         position: relative;
         width: 1100px;
@@ -784,6 +903,7 @@
         flex-wrap: wrap;
         padding: 30px;
     }
+
         .container-blog .card {
             position: relative;
             max-width: 300px;
@@ -795,9 +915,11 @@
             flex-direction: column;
             transition: 0.3s ease-in-out
         }
+
             .container-blog .card:hover {
                 height: 420px;
             }
+
             .container-blog .card .imgBx {
                 position: relative;
                 width: 260px;
@@ -806,10 +928,12 @@
                 z-index: 1;
                 text-align: center;
             }
+
                 .container-blog .card .imgBx img {
                     max-width: 100%;
                     border-radius: 4px;
                 }
+
             .container-blog .card .content {
                 position: relative;
                 margin-top: -140px;
@@ -820,63 +944,69 @@
                 opacity: 0;
                 transition: 0.3s ease-in-out;
             }
+
             .container-blog .card:hover .content {
                 visibility: visible;
                 opacity: 1;
                 margin-top: -40px;
                 transition-delay: 0.3s;
             }
-    </style>
+</style>
 <!-- Blog end-->
 
-    <hr class="logo-brand" />
-    <!--intro store start -->
-    <section class="section">
-        <div class="product-banner">
-            <div class="left">
-                <img src="~/Content/images/driving.jpg" alt="" />
-            </div>
-            <div class="right">
-                <div class="content">
-                    <h2><span class="discount">15% </span> SALE OFF</h2>
-                    <h1>
-                        <span>Logitech G29</span>
-                        <span>DRIVING FORCE PS5</span>
-                    </h1>
-                    <div class="btn-group">
-                        <button class="button">Mua Ngay</button>
-                    </div>
+<hr class="logo-brand" />
+<!--intro store start -->
+<section class="section">
+    <div class="product-banner">
+        <div class="left">
+            <img src="~/Content/images/driving.jpg" alt="" />
+        </div>
+        <div class="right">
+            <div class="content">
+                <h2><span class="discount">15% </span> SALE OFF</h2>
+                <h1>
+                    <span>Logitech G29</span>
+                    <span>DRIVING FORCE PS5</span>
+                </h1>
+                <div class="btn-group">
+                    <button class="button">Mua Ngay</button>
                 </div>
             </div>
         </div>
-    </section>
-    <style>
-        .product-banner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            height: 50%;
-            background-color: #E9E9E7;
-        }
+    </div>
+</section>
+<style>
+    .product-banner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 50%;
+        background-color: #E9E9E7;
+    }
+
         .product-banner .left img {
             object-fit: cover;
             height: 100%;
             width: 115%;
         }
+
         .product-banner .right {
             align-self: center;
             text-align: center;
             padding: 1.6rem;
             padding-left: 20%;
         }
+
         .product-banner .content h2 {
             color: #fbb419;
             font-size: 50px;
             font-weight: 700;
             margin-bottom: 1rem;
         }
+
         .product-banner .content .discount {
             color: #b888ff;
         }
+
         .product-banner .content h1 span {
             color: #000;
             font-size: 50px;
@@ -884,87 +1014,119 @@
             display: block;
             line-height: 1;
         }
-        .btn-group .button {
-            background-color: #f24137; /* Green */
-            border: 1px solid green;
-            color: white;
-            padding: 10px 24px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 20px;
-            cursor: pointer;
-            float: left;
-            border-radius: 3px;
-        }
+
+    .btn-group .button {
+        background-color: #f24137; /* Green */
+        border: 1px solid green;
+        color: white;
+        padding: 10px 24px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        cursor: pointer;
+        float: left;
+        border-radius: 3px;
+    }
+
         .btn-group .button:not(:last-child) {
             border-right: none; /* Prevent double borders */
         }
+
         .btn-group .button:hover {
             background-color: white;
             color: #000;
         }
-    </style>
-    <!--intro store end -->
-    
-    <!-- Regester start-->
-        <section class="newsletter-area spad">
-            <div class="container">
-                <form method="post" action="#">
-                    <p>Đăng kí nhận tin để nhận được nhiều phần 
-                    quà hấp dẫn của Game Store GOD.
-                    </p>
-                    <div class="row subscribe-sec">
-                        <div class="col-md-9">
-                            <input type="email" class="form-control" id="email"
-                                   name="email" placeholder="Nhập Email của bạn..."
-                                   required=""/>
-                        </div>
-                        <div class="col-md-3">
-                            <button type="submit" class="btn submit">
-                                Đăng ký
-                            </button>
-                        </div>
-                    </div>
-                </form>
+</style>
+<!--intro store end -->
+<!-- Regester start-->
+<section class="newsletter-area spad">
+    <div class="container">
+        <form method="post" action="#">
+            <p>
+                Đăng kí nhận tin để nhận được nhiều phần
+                quà hấp dẫn của Game Store GOD.
+            </p>
+            <div class="row subscribe-sec">
+                <div class="col-md-9">
+                    <input type="email" class="form-control" id="email"
+                           name="email" placeholder="Nhập Email của bạn..."
+                           required="" />
+                </div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn submit">
+                        Đăng ký
+                    </button>
+                </div>
             </div>
-        </section>
-        <style>
-            .newsletter-area{
-                background-color: #f4f4f4;
-            }
-            .newsletter-area form{
-                margin: 0 auto;
-                width: 60%;
-            }
-            .newsletter-area p{
-                font-size: 15px;
-                margin-bottom: 15px;
-                color: #000;
-                font-weight: bold;
-                text-align: center;
-                margin-top: 35px;
-            }
-            .subscribe-sec input{
-                padding: 12px;
-                color: #495057;
-                font-size: 15px;
-                border: none;
-                outline: none;
-                letter-spacing: -1px;
-                box-shadow: 1px 3px 8px rgba(0,0,0,0.15);
-            }
-            .btn.submit{
-                background-color: #ff7200;
-                color: #fff;
-                padding: 12px 20px;
-                text-transform: uppercase;
-                font-size: 15px;
-                letter-spacing: 2px;
-                font-weight: 400;
-                box-shadow: 1px 3px 8px rgba(0,0,0,0.15);
-                transition: all 0.3s;
-            }
-        </style>
-        <div class="clear-space" style="margin-bottom: 25px;"></div>
-    <!-- Regester end-->
+        </form>
+    </div>
+</section>
+<style>
+    .newsletter-area {
+        background-color: #f4f4f4;
+    }
+
+        .newsletter-area form {
+            margin: 0 auto;
+            width: 60%;
+        }
+
+        .newsletter-area p {
+            font-size: 15px;
+            margin-bottom: 15px;
+            color: #000;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 35px;
+        }
+
+    .subscribe-sec input {
+        padding: 12px;
+        color: #495057;
+        font-size: 15px;
+        border: none;
+        outline: none;
+        letter-spacing: -1px;
+        box-shadow: 1px 3px 8px rgba(0,0,0,0.15);
+    }
+
+    .btn.submit {
+        background-color: #ff7200;
+        color: #fff;
+        padding: 12px 20px;
+        text-transform: uppercase;
+        font-size: 15px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        box-shadow: 1px 3px 8px rgba(0,0,0,0.15);
+        transition: all 0.3s;
+    }
+</style>
+<div class="clear-space" style="margin-bottom: 25px;"></div>
+<!-- Regester end-->
+<!-- automatic show popup after 1.5s start-->
+    <script>
+        const loginPopup = document.querySelector(".login-popup");
+        const close = document.querySelector(".close");
+
+        window.addEventListener("load", function () {
+            showPopup();
+        })
+        function showPopup() {
+            const timeLimit = 1 // seconds;
+            let i = 0;
+            const timer = setInterval(function () {
+                i++;
+                if (i == timeLimit) {
+                    clearInterval(timer);
+                    loginPopup.classList.add("show");
+                }
+                console.log(i)
+            }, 1200);
+        }
+        close.addEventListener("click", function () {
+            loginPopup.classList.remove("show");
+        })
+    </script>
+<!-- automatic show popup after 1.5s end-->
