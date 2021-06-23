@@ -42,7 +42,6 @@
             <div class="col-md-5 dtl-header">
                 <p class="text-1">Hỏi Đáp</p>
                 <p class="text-1">Hướng Dẫn</p>
-                <p class="text-1">Đăng ký</p>
                 <p class="text-1">Đăng nhập</p>
             </div>
         </div>
@@ -84,7 +83,7 @@
             </div>
             <div class="col-md-1 header__cart">
                 <a href="cart.html">
-                    <span class="header__notice">4</span>
+                    <span class="header__notice">0</span>
                     <i class="fas fa-shopping-cart header__nav-cart-icon"></i>
                 </a>
             </div>
@@ -111,9 +110,6 @@
                         @Html.ActionLink("Bài viết", "Index", "Post", null, new { @class = "colorTextAction" }) &emsp;
                     </li>
                     <li class="header__nav-item">
-                        @Html.ActionLink("Cộng tác", "Index", "Post", null, new { @class = "colorTextAction" }) &emsp;
-                    </li>
-                    <li class="header__nav-item">
                         @Html.ActionLink("Liên hệ", "Index", "Contact", null, new { @class = "colorTextAction" })
                     </li>
                     <!-- css start -->
@@ -134,6 +130,72 @@
         </div>
         @RenderBody()
         <!-- end post -->
+        <!-- Regester start-->
+        <section class="newsletter-area spad">
+            <div class="container">
+                <form method="post" action="#">
+                    <p>
+                        Đăng kí nhận tin để nhận được nhiều phần
+                        quà hấp dẫn của Game Store GOD.
+                    </p>
+                    <div class="row subscribe-sec">
+                        <div class="col-md-9">
+                            <input type="email" class="form-control" id="email"
+                                   name="email" placeholder="Nhập Email của bạn..."
+                                   required="" />
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="btn submit">
+                                Đăng ký
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <style>
+            .newsletter-area {
+                background-color: #f4f4f4;
+            }
+
+                .newsletter-area form {
+                    margin: 0 auto;
+                    width: 60%;
+                }
+
+                .newsletter-area p {
+                    font-size: 15px;
+                    margin-bottom: 15px;
+                    color: #000;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-top: 35px;
+                }
+
+            .subscribe-sec input {
+                padding: 12px;
+                color: #495057;
+                font-size: 15px;
+                border: none;
+                outline: none;
+                letter-spacing: -1px;
+                box-shadow: 1px 3px 8px rgba(0,0,0,0.15);
+            }
+
+            .btn.submit {
+                background-color: #ff7200;
+                color: #fff;
+                padding: 12px 20px;
+                text-transform: uppercase;
+                font-size: 15px;
+                letter-spacing: 2px;
+                font-weight: 400;
+                box-shadow: 1px 3px 8px rgba(0,0,0,0.15);
+                transition: all 0.3s;
+            }
+        </style>
+        <div class="clear-space" style="margin-bottom: 25px;"></div>
+        <!-- Regester end-->
         <!-- footer -->
         <footer>
             <div class="container">
