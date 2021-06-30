@@ -27,5 +27,10 @@ namespace DoAnWeb.Controllers
             var loaisp = from lsp in data.tblLoaiSanPhams select lsp;
             return PartialView(loaisp);
         }
+        public ActionResult SPTheotheloai(string id)
+        {
+            var game = from g in data.tblSanPhams where g.MaLoai == id select g;
+            return View(game);
+        }
     }
 }

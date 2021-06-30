@@ -1997,6 +1997,7 @@
     <Content Include="Views\Shared\_LayoutProduct.cshtml" />
     <Content Include="Views\GameProduct\Index.cshtml" />
     <Content Include="Views\GameProduct\Loaisp.cshtml" />
+    <Content Include="Views\GameProduct\SPTheotheloai.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
