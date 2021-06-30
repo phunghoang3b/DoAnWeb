@@ -1,0 +1,37 @@
+﻿@model IEnumerable<DoAnWeb.Models.tblSanPham>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutProduct.cshtml";
+}
+
+<h2 style="font-size:24px; text-align:center; padding-left: 290px; margin-top: -320px;">Đây là trang sản phẩm</h2>
+<div class="row" style="padding-left: 282px;">
+    @foreach (var game in Model)
+    {
+        <div class="col-sm-4 col-lg-4 col-md-4" style="border: 1px solid #808080">
+            <div class="thumbnail">
+                <a href="@Url.Action("Details", "GameProduct", new { id = game.MaSP})">
+                    <img alt="@game.TenSP" src="~/Content/Hinhsanpham/@game.HinhAnh" width="255" />
+                    <div>
+                        <br />
+                        <h4 style="text-align: center">
+                            @game.TenSP
+                        </h4>
+                        <p></p>
+                    </div>
+                    <div class="view-pro">
+                        <p class="pull-right" style="padding-left: 170px;">15 reviews</p>
+                    </div>
+                    <div class="ratings" style="margin-top:-40px; padding-left:15px;">                   
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>                
+                    </div>
+                </a>
+            </div>
+        </div>
+    }
+</div>
+

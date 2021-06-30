@@ -1,0 +1,11 @@
+﻿@model IEnumerable<DoAnWeb.Models.tblLoaiSanPham>
+<div class="col-md-3">
+    <div id="list-example" class="list-group">
+        @foreach (var item in Model)
+        {
+            <a href="@Url.Action("SPTheotheloai", "GameProduct", new { id = item.MaLoai})" class="list-group-item list-group-item-action">
+                @item.TenLoai
+            </a>
+        }
+    </div>
+</div>

@@ -48,6 +48,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -122,12 +123,18 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\GameProductController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IntroductionController.cs" />
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dbQLBanGame.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbQLBanGame.dbml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -1768,6 +1775,11 @@
     <Content Include="Content\fonts\fontawesome\webfonts\fa-brands-400.svg" />
     <Content Include="Content\fonts\fontawesome\webfonts\fa-regular-400.svg" />
     <Content Include="Content\fonts\fontawesome\webfonts\fa-solid-900.svg" />
+    <Content Include="Content\Hinhsanpham\pro2.jpg" />
+    <Content Include="Content\Hinhsanpham\pro3.jpg" />
+    <Content Include="Content\Hinhsanpham\pro4.jpg" />
+    <Content Include="Content\Hinhsanpham\pro5.jpg" />
+    <Content Include="Content\Hinhsanpham\pro6.jpg" />
     <Content Include="Content\imagedetail\ct1.jpg" />
     <Content Include="Content\imagedetail\ct2.jpg" />
     <Content Include="Content\imagedetail\ct3.jpg" />
@@ -1949,6 +1961,11 @@
     <Content Include="Content\fonts\fontawesome\webfonts\fa-solid-900.woff" />
     <Content Include="Content\fonts\fontawesome\webfonts\fa-solid-900.woff2" />
     <Content Include="Content\owlcarousel\README.md" />
+    <Content Include="Models\dbQLBanGame.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>dbQLBanGame.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -1977,10 +1994,12 @@
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\Introduction\Index.cshtml" />
     <Content Include="Views\Post\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutProduct.cshtml" />
+    <Content Include="Views\GameProduct\Index.cshtml" />
+    <Content Include="Views\GameProduct\Loaisp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -1994,6 +2013,14 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\dbQLBanGame.dbml.layout">
+      <DependentUpon>dbQLBanGame.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

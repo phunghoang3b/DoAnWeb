@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 17.5" name="dbQLBanGame">
+  <DataContextMoniker Name="/dbQLBanGameDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2742e8d6-3137-4296-a1e9-2e22fedd2489" absoluteBounds="6.25, 1.25, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/dbQLBanGameDataContext/tblChiTietDonHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5b41513c-5338-4b73-8913-26fb1cf16dba" absoluteBounds="6.265, 1.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5ca3b8ed-2364-49aa-8eee-1a3412ae2db7" absoluteBounds="3.5, 6.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dbQLBanGameDataContext/tblTinTuc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ee986b1-a62f-4645-9082-e12ab8309f04" absoluteBounds="3.515, 7.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d7173c19-7cf5-49b7-b675-9a701b5ad9f4" absoluteBounds="3.5, 4.375, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/dbQLBanGameDataContext/tblDonDatHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0ff8a62c-294f-4a4b-a10a-b0ae07c51100" absoluteBounds="3.515, 4.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="34332580-5e44-4365-97df-5323751dee81" absoluteBounds="3.5, 10.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/dbQLBanGameDataContext/tblDonHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b84d7e1-95e7-4f16-8694-ee24aeedc08e" absoluteBounds="3.515, 10.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2a4c9922-e1da-40a3-8b9d-5fae0eea3ef0" absoluteBounds="0.75, 15.125, 2, 2.1554996744791648">
+      <DataClassMoniker Name="/dbQLBanGameDataContext/tblKhacHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5d9e7008-0173-4e70-91db-61b4f2bef4f3" absoluteBounds="0.765, 15.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="42a7d1a3-32c6-483a-b1d5-7460bdd32a68" absoluteBounds="0.75, 2, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/dbQLBanGameDataContext/tblLoaiSanPham" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9532b66f-eedf-4692-84ab-fbcbb5ae805b" absoluteBounds="0.765, 2.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9f57785a-8351-49cb-a33a-4585507c2946" absoluteBounds="1.5, 13.125, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/dbQLBanGameDataContext/tblLoaiTaiKhoan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ed0fa92-f5f8-4699-b97f-1b4f0a1fe93d" absoluteBounds="1.5150000000000001, 13.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b5e0139b-8f32-47fc-9231-fec50abfdcfa" absoluteBounds="0.75, 4.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dbQLBanGameDataContext/tblNhaCungCap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="53323501-c61b-4e70-b21a-3403d9e6b368" absoluteBounds="0.765, 4.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fd0e8fee-1feb-4d47-9078-5ec9a6f8702e" absoluteBounds="6.25, 4.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dbQLBanGameDataContext/tblPhieuGiaoHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d2611895-7709-437e-a82e-97fec68bdcc4" absoluteBounds="6.265, 4.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4f2d6faa-6f4e-4625-a0eb-11bc306154c0" absoluteBounds="3.5, 0.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/dbQLBanGameDataContext/tblSanPham" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ae5cb8c1-61dd-4d7c-9f0b-e7878c0b8d11" absoluteBounds="3.515, 1.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c9f660d1-d3df-418a-9aa0-6c562f0a729f" absoluteBounds="0.75, 9, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/dbQLBanGameDataContext/tblTaiKhoan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="065b6a20-db63-4f12-8b49-dc5a75430699" absoluteBounds="0.765, 9.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b5f47943-3657-42db-8605-19c65f1d54ef" absoluteBounds="0.75, 7, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/dbQLBanGameDataContext/tblThuongHieu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="02a22f9e-4175-4c06-8e05-b993381bb781" absoluteBounds="0.765, 7.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 10.125); (5.875 : 9.75); (5.875 : 2.13544840494792); (6.25 : 2.13544840494792)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLBanGameDataContext/tblDonHang/tblDonHang_tblChiTietDonHang" />
+      <nodes>
+        <classShapeMoniker Id="34332580-5e44-4365-97df-5323751dee81" />
+        <classShapeMoniker Id="2742e8d6-3137-4296-a1e9-2e22fedd2489" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 16.2027498372396); (4.53125 : 16.2027498372396); (4.53125 : 12.2804996744792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLBanGameDataContext/tblKhacHang/tblKhacHang_tblDonHang" />
+      <nodes>
+        <classShapeMoniker Id="2a4c9922-e1da-40a3-8b9d-5fae0eea3ef0" />
+        <classShapeMoniker Id="34332580-5e44-4365-97df-5323751dee81" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.06814697265625); (3.19791666666667 : 5.06814697265625 : JumpStart); (3.36458333333333 : 5.06814697265625 : JumpEnd); (3.5 : 5.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLBanGameDataContext/tblNhaCungCap/tblNhaCungCap_tblDonDatHang" />
+      <nodes>
+        <classShapeMoniker Id="b5e0139b-8f32-47fc-9231-fec50abfdcfa" />
+        <classShapeMoniker Id="d7173c19-7cf5-49b7-b675-9a701b5ad9f4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.06814697265625); (5.79166666666667 : 5.06814697265625 : JumpStart); (5.95833333333333 : 5.06814697265625 : JumpEnd); (6.25 : 5.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLBanGameDataContext/tblDonDatHang/tblDonDatHang_tblPhieuGiaoHang" />
+      <nodes>
+        <classShapeMoniker Id="d7173c19-7cf5-49b7-b675-9a701b5ad9f4" />
+        <classShapeMoniker Id="fd0e8fee-1feb-4d47-9078-5ec9a6f8702e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.63022420247396); (6.25 : 1.63022420247396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLBanGameDataContext/tblSanPham/tblSanPham_tblChiTietDonHang" />
+      <nodes>
+        <classShapeMoniker Id="4f2d6faa-6f4e-4625-a0eb-11bc306154c0" />
+        <classShapeMoniker Id="2742e8d6-3137-4296-a1e9-2e22fedd2489" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.37621330413662); (3.125 : 4.00121330413662); (3.125 : 2.11620198567708); (3.19791666666667 : 2.11620198567708 : JumpStart); (3.36458333333333 : 2.11620198567708 : JumpEnd); (3.5 : 2.11620198567708)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLBanGameDataContext/tblNhaCungCap/tblNhaCungCap_tblSanPham" />
+      <nodes>
+        <classShapeMoniker Id="b5e0139b-8f32-47fc-9231-fec50abfdcfa" />
+        <classShapeMoniker Id="4f2d6faa-6f4e-4625-a0eb-11bc306154c0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.71759724934896); (3.04166666666667 : 2.71759724934896 : JumpStart); (3.36458333333333 : 2.71759724934896 : JumpEnd); (3.5 : 2.71759724934896)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLBanGameDataContext/tblLoaiSanPham/tblLoaiSanPham_tblSanPham" />
+      <nodes>
+        <classShapeMoniker Id="42a7d1a3-32c6-483a-b1d5-7460bdd32a68" />
+        <classShapeMoniker Id="4f2d6faa-6f4e-4625-a0eb-11bc306154c0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9); (3.125 : 8.625); (3.125 : 8.82980868174078); (3.50121330413662 : 8.45359537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbQLBanGameDataContext/tblTaiKhoan/tblTaiKhoan_tblTinTuc" />
+      <nodes>
+        <classShapeMoniker Id="c9f660d1-d3df-418a-9aa0-6c562f0a729f" />
+        <classShapeMoniker Id="5ca3b8ed-2364-49aa-8eee-1a3412ae2db7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 9.5625); (4.4687475 : 9.5625); (4.4687475 : 10.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLBanGameDataContext/tblTaiKhoan/tblTaiKhoan_tblDonHang" />
+      <nodes>
+        <classShapeMoniker Id="c9f660d1-d3df-418a-9aa0-6c562f0a729f" />
+        <classShapeMoniker Id="34332580-5e44-4365-97df-5323751dee81" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.125 : 13.125); (2.125 : 10.3862939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLBanGameDataContext/tblLoaiTaiKhoan/tblLoaiTaiKhoan_tblTaiKhoan" />
+      <nodes>
+        <classShapeMoniker Id="9f57785a-8351-49cb-a33a-4585507c2946" />
+        <classShapeMoniker Id="c9f660d1-d3df-418a-9aa0-6c562f0a729f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.03214495227364); (3.28125 : 6.50089495227364); (3.28125 : 1.40184899283854); (3.5 : 1.40184899283854)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQLBanGameDataContext/tblThuongHieu/tblThuongHieu_tblSanPham" />
+      <nodes>
+        <classShapeMoniker Id="b5f47943-3657-42db-8605-19c65f1d54ef" />
+        <classShapeMoniker Id="4f2d6faa-6f4e-4625-a0eb-11bc306154c0" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

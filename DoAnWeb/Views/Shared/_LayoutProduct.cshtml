@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -129,6 +130,53 @@
                 </ul>
             </div>
         </div>
+        @*<div class="row backroud">*@
+        @*<div class="col-md-3">*@
+            <div id="list-example" class="list-group">
+                @Html.Action("Loaisp", "GameProduct")
+                @*<a class="list-group-item list-group-item-action" href="#list-item-1">
+                    <svg class="menu__item-icon" id="Capa_1" enable-background="new 0 0 512 512" height="15" viewBox="0 0 512 512" width="15"><g><i class="fab fa-playstation"></i></g></svg>
+                    <span class="text-2">PlayStation 5</span>
+                </a>
+                <a class="list-group-item list-group-item-action" href="#list-item-2">
+                    <svg class="menu__item-icon" id="Capa_1" enable-background="new 0 0 512 512" height="15" viewBox="0 0 512 512" width="15"><g><i class="fab fa-playstation"></i></g></svg>
+                    <span class="text-2">PlayStation 4</span>
+                </a>
+                <a class="list-group-item list-group-item-action" href="#list-item-3">
+                    <svg class="menu__item-icon" viewBox="0 0 64 64" width="15" height="15"><g><i class="fab fa-xbox"></i></g></svg>
+                    <span class="text-2">Xbox Series X | S</span>
+                </a>
+                <a class="list-group-item list-group-item-action" href="#list-item-4">
+                    <svg class="menu__item-icon" viewBox="0 0 512 512" width="15" height="15"><g><i class="fab fa-xbox"></i></g></svg>
+                    <span class="text-2">Xbox One | Xbox 360</span>
+                </a>
+                <a class="list-group-item list-group-item-action" href="#list-item-4">
+                    <svg class="menu__item-icon" id="Capa_1" enable-background="new 0 0 513.529 513.529" height="15" viewBox="0 0 513.529 513.529" width="15"><g><i class="fas fa-gamepad"></i></g></svg>
+                    <span class="text-2">Nintendo Switch</span>
+                </a>
+                <a class="list-group-item list-group-item-action" href="#list-item-4">
+                    <svg class="menu__item-icon" id="Capa_1" enable-background="new 0 0 512 512" height="15" viewBox="0 0 512 512" width="15"><g><i class="fas fa-gamepad"></i></g></svg>
+                    <span class="text-2">Nintendo Switch Lite</span>
+                </a>
+                <a class="list-group-item list-group-item-action" href="#list-item-4">
+                    <svg class="menu__item-icon" id="Capa_1" enable-background="new 0 0 512 512" height="15" viewBox="0 0 512 512" width="15"><g><i class="fab fa-steam"></i></g></svg>
+                    <span class="text-2">Game</span>
+                </a>
+                <a class="list-group-item list-group-item-action" href="#list-item-4">
+                    <svg class="menu__item-icon" id="Capa_1" enable-background="new 0 0 512 512" height="15" viewBox="0 0 512 512" width="15"><g><i class="far fa-newspaper"></i></g></svg>
+                    <span class="text-2">Bản Tin</span>
+                </a>
+                <a class="list-group-item list-group-item-action" href="#list-item-4">
+                    <svg class="menu__item-icon" id="Capa_1" enable-background="new 0 0 512 512" height="15" viewBox="0 0 512 512" width="15"><g><i class="fas fa-keyboard"></i></g></svg>
+                    <span class="text-2">Phụ Kiện</span>
+                </a>
+                <a class="list-group-item list-group-item-action" href="#list-item-4">
+                    <svg class="menu__item-icon" id="Capa_1" enable-background="new 0 0 512 512" height="15" viewBox="0 0 512 512" width="15"><g><i class="fas fa-tools"></i></g></svg>
+                    <span class="text-2">Sửa Chữa</span>
+                </a>*@
+            </div>
+        @*</div>*@
+        @*</div>*@
         @RenderBody()
         <!-- end post -->
         <!-- Regester start-->
@@ -393,64 +441,63 @@
         </style>
         <!-- end footer -->
     </div>
-    <div class="container">
-        <div class="main"></div>
-    </div>
-    <div id="go-top"><i class="fas fa-arrow-up"></i></div>
-    <style>
-        #go-top {
-            display: none;
-            font-size: 25px;
-            position: fixed;
-            bottom: 70px;
-            right: 50px;
-            border: 2px solid #000;
-            border-radius: 5px;
-            width: 30px;
-            height: 30px;
-            line-height: 25px;
-            text-align: center;
-            cursor: pointer;
-        }
-    </style>
-    <!-- end container -->
-
-    <!-- -->
-    <!-- Glidejs Script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
-    <script src="~/Content/js/slider.js"></script>
-    <script>
-        (function ($, window, document) {
-            $.fn.goTop = function (options) {
-                var defaults = {
-                    scrollTop: 100,
-                    scrollSpeed: 1000,
-                    fadeInSpeed: 1000,
-                    fadeOutSpeed: 500
-                };
-
-                var options = $.extend(defaults, options);
-                var $this = $(this);
-                $(window).on('scroll', function () {
-                    if ($(window).scrollTop() > options.scrollTop) {
-                        $this.fadeIn(options.fadeInSpeed);
-                    } else {
-                        $this.fadeOut(options.fadeOutSpeed);
-                    }
-                })
-                $this.on('click', function () {
-                    $('html,body').animate({
-                        'scrollTop': 0
-                    }, options.speed)
-                })
+        <div class="container">
+            <div class="main"></div>
+        </div>
+        <div id="go-top"><i class="fas fa-arrow-up"></i></div>
+        <style>
+            #go-top {
+                display: none;
+                font-size: 25px;
+                position: fixed;
+                bottom: 70px;
+                right: 50px;
+                border: 2px solid #000;
+                border-radius: 5px;
+                width: 30px;
+                height: 30px;
+                line-height: 25px;
+                text-align: center;
+                cursor: pointer;
             }
-        })(jQuery, window, document)
-        $('#go-top').goTop({
-            scrollTop: 100,
-            scrollSpeed: 1000,
-            fadeInSpeed: 1000,
-            fadeOutSpeed: 500
-        })
-    </script>
+        </style>
+        <!-- end container -->
+        <!-- -->
+        <!-- Glidejs Script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+        <script src="~/Content/js/slider.js"></script>
+        <script>
+            (function ($, window, document) {
+                $.fn.goTop = function (options) {
+                    var defaults = {
+                        scrollTop: 100,
+                        scrollSpeed: 1000,
+                        fadeInSpeed: 1000,
+                        fadeOutSpeed: 500
+                    };
+
+                    var options = $.extend(defaults, options);
+                    var $this = $(this);
+                    $(window).on('scroll', function () {
+                        if ($(window).scrollTop() > options.scrollTop) {
+                            $this.fadeIn(options.fadeInSpeed);
+                        } else {
+                            $this.fadeOut(options.fadeOutSpeed);
+                        }
+                    })
+                    $this.on('click', function () {
+                        $('html,body').animate({
+                            'scrollTop': 0
+                        }, options.speed)
+                    })
+                }
+            })(jQuery, window, document)
+            $('#go-top').goTop({
+                scrollTop: 100,
+                scrollSpeed: 1000,
+                fadeInSpeed: 1000,
+                fadeOutSpeed: 500
+            })
+        </script>
 </body>
 </html>
