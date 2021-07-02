@@ -44,7 +44,6 @@
             <div class="col-md-5 dtl-header">
                 <p class="text-1">Hỏi Đáp</p>
                 <p class="text-1">Hướng Dẫn</p>
-                <p class="text-1">Đăng nhập</p>
             </div>
         </div>
         <!-- end menu top -->
@@ -79,16 +78,11 @@
                         Gọi điện tư vấn
                     </div>
                     <div class="header__call-number">
-                        0352.860.701
+                        0374.412.199
                     </div>
                 </div>
             </div>
-            <div class="col-md-1 header__cart">
-                <a href="cart.html">
-                    <span class="header__notice">0</span>
-                    <i class="fas fa-shopping-cart header__nav-cart-icon"></i>
-                </a>
-            </div>
+            <div class="col-md-1 header__cart"></div>
         </div>
         <!-- end menu bottom -->
         <div class="row">
@@ -115,10 +109,10 @@
                         @Html.ActionLink("Liên hệ", "Index", "Contact", null, new { @class = "colorTextAction" }) &emsp;
                     </li>
                     <li class="header__nav-item">
-                        @Html.ActionLink("Đăng ký", "Index", "Contact", null, new { @class = "colorTextAction" }) &emsp;
+                        @Html.ActionLink("Đăng ký", "Dangky", "Nguoidung", null, new { @class = "colorTextAction" }) &emsp;
                     </li>
                     <li class="header__nav-item">
-                        @Html.ActionLink("Đăng nhập", "Index", "Contact", null, new { @class = "colorTextAction" }) &emsp;
+                        @Html.ActionLink("Đăng nhập", "Dangnhap", "Nguoidung", null, new { @class = "colorTextAction" }) &emsp;
                     </li>
                     <li class="header__nav-item">
                         @Html.Action("GiohangPartial", "Giohang")

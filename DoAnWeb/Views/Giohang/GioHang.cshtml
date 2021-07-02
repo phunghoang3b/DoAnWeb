@@ -5,8 +5,8 @@
     Layout = "~/Views/Shared/_LayoutProduct.cshtml";
 }
 
-<h2 style="text-align: center">Thông Tin Giỏ Hàng</h2>
-<table align="center" border="1">
+<h3 style="text-align: center;top: 25%;position: absolute;left: 51%;">Thông Tin Giỏ Hàng</h3>
+<table align="center" border="1" style="position:absolute; margin-left:17.5%;width:56.5%;top:33%">
     <tr style="text-align:center; font-weight: bold">
         <td>Mã sản phẩm </td>
         <td>Tên sản phẩm </td>
@@ -14,21 +14,25 @@
         <td>Số lượng </td>
         <td>Đơn giá </td>
         <td>Thành tiền </td>
+        <td></td>
+        <td></td>
     </tr>
-    @foreach(var item in Model)
+    @foreach (var item in Model)
     {
         <tr style="text-align: center; font-weight: bold">
             <td>@item.iMaSP</td>
             <td>@item.sTenSP</td>
-            <td><img class="" src="~/Content/Hinhsanpham/@item.sHinhAnh"/></td>
+            <td><img class="product__panel-img" src="~/Content/Hinhsanpham/@item.sHinhAnh"/></td>
             <td>@item.iSoLuong</td>
             <td>@String.Format("{0:0,0}", item.dDonGia)</td>
             <td>@String.Format("{0:0,0}", item.dThanhTien)</td>
+            <td><a href="@Url.Action("Details", "GameProduct", new { id = item.iMaSP })">Chi Tiết</a></td>
+            <td>@Html.ActionLink("Xóa", "XoaGiohang", new { @iMaSp = item.iMaSP})</td>
         </tr>
     }
     <tr style="font-weight: bold; text-align:right; color: red">
-        <td colspan="3">Số lượng sản phẩm: @ViewBag.TongSoLuong</td>
-        <td colspan="3">Tổng Tiền: @String.Format("{0:0,0}", ViewBag.TongTien) VNĐ</td>
+        <td colspan="4">Số lượng sản phẩm: @ViewBag.TongSoLuong</td>
+        <td colspan="4">Tổng Tiền: @String.Format("{0:0,0}", ViewBag.TongTien) VNĐ</td>
     </tr>
 </table>
 

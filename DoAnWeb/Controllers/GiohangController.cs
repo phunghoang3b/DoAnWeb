@@ -86,5 +86,24 @@ namespace DoAnWeb.Controllers
         {
             return View();
         }
+        //Xoa gio hang
+        public ActionResult XoaGiohang(string iMaSP)
+        {
+            //lay gio hang tu session
+            List<Giohang> lstGiohang = Laygiohang();
+            //Kiem tra san pham da co trong session["Giohang"]
+            Giohang sanpham = lstGiohang.SingleOrDefault(n => n.iMaSP == iMaSP);
+            //Neu ton tai thi cho sua so luong san pham
+            if (sanpham != null)
+            {
+                lstGiohang.RemoveAll(n => n.iMaSP == iMaSP);
+                return RedirectToAction("GioHang");
+            }
+            if (lstGiohang.Count == 0)
+            {
+                return RedirectToAction("Index", "GameProduct");
+            }
+            return RedirectToAction("GioHang");
+        }
     }
 }
