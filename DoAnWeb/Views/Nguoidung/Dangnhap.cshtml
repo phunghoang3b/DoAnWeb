@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Dangnhap";
+    Layout = "~/Views/Shared/_LayoutProduct.cshtml";
+}
+
+<h4 style="color:red; text-align:center; position: absolute; left: 44%; top:63%"> @ViewBag.Thongbao</h4>
+<table align="center" style="width: 33%;
+        left: 43%;
+        position: absolute;
+        top: 33%;
+        background-image: url('../../Content/images/xboxbnlog.jpg');
+        background-size: cover;
+        color: white;
+        font-weight:500;
+        border-radius: 10px;
+        height: 27%;
+        ">
+    <h3 style="text-align:center; top:26%;position:absolute;left:55%;">Đăng Nhập</h3>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <tr style="height: 40px">
+            <td align="right" style="padding: 25px;">Tên đăng nhập:</td>
+            <td>
+                @Html.TextBox("TenDN")
+                @ViewData["Loi1"]
+            </td>
+        </tr>
+        <tr style="height: 40px">
+            <td align="right" style="padding: 25px;"> Mật khẩu:</td>
+            <td>
+                @Html.Password("Matkhau")
+                @ViewData["Loi2"]
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td></td>
+            <td>
+                <input type="submit" value="Đăng nhập" style="width:100px; border-radius: 5px; background-color: red; color: white; font-weight: bold; margin-left: -27px;"/>
+            </td>
+        </tr>
+    }
+</table>
+<div class="space" style="margin-bottom: 100px"></div>
+

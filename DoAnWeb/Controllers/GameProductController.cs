@@ -19,7 +19,7 @@ namespace DoAnWeb.Controllers
         public ActionResult Index()
         {
             //Lay 5 game moi nhat
-            var gamemoi = Laygamemoi(5);
+            var gamemoi = Laygamemoi(30);
             return View(gamemoi);
         }
         public ActionResult Loaisp()
@@ -31,6 +31,13 @@ namespace DoAnWeb.Controllers
         {
             var game = from g in data.tblSanPhams where g.MaLoai == id select g;
             return View(game);
+        }
+        public ActionResult Details(string id)
+        {
+            var game = from g in data.tblSanPhams
+                       where g.MaSP == id
+                       select g;
+            return View(game.Single());
         }
     }
 }

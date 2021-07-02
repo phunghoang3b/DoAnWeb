@@ -124,8 +124,10 @@
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\GameProductController.cs" />
+    <Compile Include="Controllers\GiohangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IntroductionController.cs" />
+    <Compile Include="Controllers\NguoidungController.cs" />
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
@@ -136,6 +138,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbQLBanGame.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Giohang.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1775,11 +1778,51 @@
     <Content Include="Content\fonts\fontawesome\webfonts\fa-brands-400.svg" />
     <Content Include="Content\fonts\fontawesome\webfonts\fa-regular-400.svg" />
     <Content Include="Content\fonts\fontawesome\webfonts\fa-solid-900.svg" />
+    <Content Include="Content\Hinhsanpham\game1.jpg" />
+    <Content Include="Content\Hinhsanpham\game2.jpg" />
+    <Content Include="Content\Hinhsanpham\game3.jpg" />
+    <Content Include="Content\Hinhsanpham\game4.jpg" />
+    <Content Include="Content\Hinhsanpham\game5.jpg" />
+    <Content Include="Content\Hinhsanpham\lite1.jpg" />
+    <Content Include="Content\Hinhsanpham\lite2.jpg" />
+    <Content Include="Content\Hinhsanpham\lite3.jpg" />
+    <Content Include="Content\Hinhsanpham\lite4.jpg" />
+    <Content Include="Content\Hinhsanpham\lite5.jpg" />
+    <Content Include="Content\Hinhsanpham\pk1.jpg" />
+    <Content Include="Content\Hinhsanpham\pk10.jpg" />
+    <Content Include="Content\Hinhsanpham\pk2.jpg" />
+    <Content Include="Content\Hinhsanpham\pk3.jpg" />
+    <Content Include="Content\Hinhsanpham\pk4.jpg" />
+    <Content Include="Content\Hinhsanpham\pk5.jpg" />
+    <Content Include="Content\Hinhsanpham\pk6.jpg" />
+    <Content Include="Content\Hinhsanpham\pk7.jpg" />
+    <Content Include="Content\Hinhsanpham\pk8.jpg" />
+    <Content Include="Content\Hinhsanpham\pk9.jpg" />
     <Content Include="Content\Hinhsanpham\pro2.jpg" />
     <Content Include="Content\Hinhsanpham\pro3.jpg" />
     <Content Include="Content\Hinhsanpham\pro4.jpg" />
     <Content Include="Content\Hinhsanpham\pro5.jpg" />
     <Content Include="Content\Hinhsanpham\pro6.jpg" />
+    <Content Include="Content\Hinhsanpham\ps1.jpg" />
+    <Content Include="Content\Hinhsanpham\ps2.jpg" />
+    <Content Include="Content\Hinhsanpham\ps3.jpg" />
+    <Content Include="Content\Hinhsanpham\ps4.jpg" />
+    <Content Include="Content\Hinhsanpham\ps5.jpg" />
+    <Content Include="Content\Hinhsanpham\pss1.jpg" />
+    <Content Include="Content\Hinhsanpham\pss2.jpg" />
+    <Content Include="Content\Hinhsanpham\pss3.jpg" />
+    <Content Include="Content\Hinhsanpham\pss4.jpg" />
+    <Content Include="Content\Hinhsanpham\pss5.jpg" />
+    <Content Include="Content\Hinhsanpham\xbox1.jpg" />
+    <Content Include="Content\Hinhsanpham\xbox2.jpg" />
+    <Content Include="Content\Hinhsanpham\xbox3.jpg" />
+    <Content Include="Content\Hinhsanpham\xbox4.jpg" />
+    <Content Include="Content\Hinhsanpham\xbox5.jpg" />
+    <Content Include="Content\Hinhsanpham\xone1.jpg" />
+    <Content Include="Content\Hinhsanpham\xone2.jpg" />
+    <Content Include="Content\Hinhsanpham\xone3.jpg" />
+    <Content Include="Content\Hinhsanpham\xone4.jpg" />
+    <Content Include="Content\Hinhsanpham\xone5.jpg" />
     <Content Include="Content\imagedetail\ct1.jpg" />
     <Content Include="Content\imagedetail\ct2.jpg" />
     <Content Include="Content\imagedetail\ct3.jpg" />
@@ -1838,6 +1881,7 @@
     <Content Include="Content\images\hinh1.jpg" />
     <Content Include="Content\images\hinh2.jpg" />
     <Content Include="Content\images\hinh3.jpg" />
+    <Content Include="Content\images\hìnhdangki.jpg" />
     <Content Include="Content\images\Intro.jpg" />
     <Content Include="Content\images\less.png" />
     <Content Include="Content\images\logo.png" />
@@ -1881,6 +1925,7 @@
     <Content Include="Content\images\Tintuc9.jpg" />
     <Content Include="Content\images\UBSoft.png" />
     <Content Include="Content\images\xbox.png" />
+    <Content Include="Content\images\xboxbnlog.jpg" />
     <Content Include="Content\images\youtube.png" />
     <Content Include="Content\images\zalo.png" />
     <Content Include="Content\js\bootstrap.min.js" />
@@ -1998,6 +2043,11 @@
     <Content Include="Views\GameProduct\Index.cshtml" />
     <Content Include="Views\GameProduct\Loaisp.cshtml" />
     <Content Include="Views\GameProduct\SPTheotheloai.cshtml" />
+    <Content Include="Views\GameProduct\Details.cshtml" />
+    <Content Include="Views\Nguoidung\Dangky.cshtml" />
+    <Content Include="Views\Nguoidung\Dangnhap.cshtml" />
+    <Content Include="Views\Giohang\GioHang.cshtml" />
+    <Content Include="Views\Giohang\GiohangPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
