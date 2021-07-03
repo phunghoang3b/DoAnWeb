@@ -1,4 +1,5 @@
 ﻿using DoAnWeb.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
@@ -145,6 +146,44 @@ namespace DoAnWeb.Controllers
             ViewBag.TongSoLuong = TongSoLuong();
             ViewBag.TongTien = TongTien();
             return View(lstGiohang);
+        }
+        public ActionResult Dathang(FormCollection collection)
+        {
+            //Thêm đơn hàng
+            tblDonHang ddh = new tblDonHang();
+            tblKhacHang kh = (tblKhacHang)Session["Username"];
+            List<Giohang> gh = Laygiohang();
+            string min = DateTime.Now.ToString("mm");
+            string sec = DateTime.Now.ToString("ss");
+            string MaDonHang = "D" + "" + min + "" + sec;
+            ddh.MaDH = MaDonHang;
+            ddh.MaKH = kh.MaKH;
+            ddh.NgayLap = DateTime.Now;
+            var ngaygiao = String.Format("{0:MM/dd/yyyy}", collection["Ngaygiao"]);
+            ddh.NgayGiao = DateTime.Parse(ngaygiao);
+            ddh.TinhTrangGiaoHang = false;
+            ddh.Dathanhtoan = false;
+            data.tblDonHangs.InsertOnSubmit(ddh);
+            data.SubmitChanges();
+            //Thêm chi tiết đơn hàng
+            foreach (var item in gh)
+            {
+                tblChiTietDonHang ctdh = new tblChiTietDonHang();
+                ctdh.MaDH = ddh.MaDH;
+                ctdh.MaSP = item.iMaSP;
+                ctdh.SoLuong = item.iSoLuong;
+                ctdh.DonGia = (decimal)item.dDonGia;
+                ctdh.MaKH = ddh.MaKH;
+                data.tblChiTietDonHangs.InsertOnSubmit(ctdh);
+            }
+            data.SubmitChanges();
+            Session["Giohang"] = null;
+            return RedirectToAction("Xacnhandonhang", "Giohang");
+        }
+        //Xác nhận đơn hàng
+        public ActionResult Xacnhandonhang()
+        {
+            return View();
         }
     }
 }

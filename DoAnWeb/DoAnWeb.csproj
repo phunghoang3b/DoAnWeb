@@ -1878,6 +1878,7 @@
     <Content Include="Content\images\game7.jpg" />
     <Content Include="Content\images\game8.jpg" />
     <Content Include="Content\images\game9.jpg" />
+    <Content Include="Content\images\Giftopen.gif" />
     <Content Include="Content\images\hinh1.jpg" />
     <Content Include="Content\images\hinh2.jpg" />
     <Content Include="Content\images\hinh3.jpg" />
@@ -2050,6 +2051,7 @@
     <Content Include="Views\Giohang\GioHang.cshtml" />
     <Content Include="Views\Giohang\GiohangPartial.cshtml" />
     <Content Include="Views\Giohang\Dathang.cshtml" />
+    <Content Include="Views\Giohang\Xacnhandonhang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
