@@ -105,5 +105,46 @@ namespace DoAnWeb.Controllers
             }
             return RedirectToAction("GioHang");
         }
+        //Cập nhật giỏ hàng
+        public ActionResult CapnhatGiohang(string iMaSP, FormCollection f)
+        {
+            //Lấy giỏ hàng từ session
+            List<Giohang> lstGiohang = Laygiohang();
+            //Kiem tra sach da co trong session ["GioHang"]
+            Giohang sanpham = lstGiohang.SingleOrDefault(n => n.iMaSP == iMaSP);
+            //Nếu tồn tại thì cho sửa số lượng
+            if (sanpham != null)
+            {
+                sanpham.iSoLuong = int.Parse(f["txtSoluong"].ToString());
+            }
+            return RedirectToAction("GioHang");
+        }
+        //Xóa tất cả thông tin trong giỏ hàng
+        public ActionResult XoaTatcaGiohang()
+        {
+            //Lấy gio hàng từ session
+            List<Giohang> lstGiohang = Laygiohang();
+            lstGiohang.Clear();
+            return RedirectToAction("Index", "GameProduct");
+        }
+        //Hiển thị View DatHang de cap nhat cac thông tin cho don hang
+        [HttpGet]
+        public ActionResult Dathang()
+        {
+            //Kiểm tra đăng nhập
+            if (Session["Username"] == null || Session["Username"].ToString() == "")
+            {
+                return RedirectToAction("Dangnhap", "Nguoidung");
+            }
+            if (Session["GioHang"] == null)
+            {
+                return RedirectToAction("Index", "GameProduct");
+            }
+            //Lấy giỏ hàng từ session
+            List<Giohang> lstGiohang = Laygiohang();
+            ViewBag.TongSoLuong = TongSoLuong();
+            ViewBag.TongTien = TongTien();
+            return View(lstGiohang);
+        }
     }
 }

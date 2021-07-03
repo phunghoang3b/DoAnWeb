@@ -101,8 +101,9 @@ namespace DoAnWeb.Controllers
                 tblKhacHang kh = db.tblKhacHangs.SingleOrDefault(n => n.Username == tendn && n.Password == matkhau);
                 if (kh != null)
                 {
-                    ViewBag.Thongbao = "Bạn đăng nhập thành công!";
+                    //ViewBag.Thongbao = "Bạn đăng nhập thành công!";
                     Session["Username"] = kh;
+                    return RedirectToAction("Index", "GameProduct");
                 }
                 else
                     ViewBag.Thongbao = "Tên đăng nhập hoặc mật khẩu không đúng";
