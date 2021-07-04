@@ -1,4 +1,7 @@
-﻿@model IEnumerable<DoAnWeb.Models.tblSanPham>
+﻿@*@model IEnumerable<DoAnWeb.Models.tblSanPham>*@
+@using DoAnWeb.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<tblSanPham>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutProduct.cshtml";
@@ -34,4 +37,17 @@
         </div>
     }
 </div>
+@*Tao lien ket cac trang*@
+@*<div class="pagenumber" style="position:absolute;margin-left:19%;top:133%">
+    Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount;
+</div>*@
+<div class="MenuTrang" style="position:absolute;margin-left:20%; margin-top:-1%">
+    @Html.PagedListPager(Model,page=>Url.Action("Index", new { page = page}))
+</div>
+<style>
+    .MenuTrang li{
+        display:inline;
+    }
+</style>
+<div class="space" style="margin-bottom:130px"></div>
 

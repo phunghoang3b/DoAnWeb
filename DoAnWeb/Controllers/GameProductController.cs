@@ -1,4 +1,5 @@
 ﻿using DoAnWeb.Models;
+using PagedList;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
@@ -16,11 +17,15 @@ namespace DoAnWeb.Controllers
             return data.tblSanPhams.OrderByDescending(a => a.NgayCapNhat).Take(count).ToList();
         }
         // GET: GameProduct
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
+            //Tạo biến quy định số sản phẩm trên mỗi trang
+            int pageSize = 9;
+            //Tạo biến số trang
+            int pageNum = (page ?? 1);
             //Lay 5 game moi nhat
             var gamemoi = Laygamemoi(30);
-            return View(gamemoi);
+            return View(gamemoi.ToPagedList(pageNum, pageSize));
         }
         public ActionResult Loaisp()
         {
