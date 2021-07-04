@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\GameProductController.cs" />
@@ -1849,6 +1850,7 @@
     <Content Include="Content\images\ad1.jpg" />
     <Content Include="Content\images\ad2.jpg" />
     <Content Include="Content\images\ad3.png" />
+    <Content Include="Content\images\backgroundlogin.png" />
     <Content Include="Content\images\banner1.jpg" />
     <Content Include="Content\images\banner10.jpg" />
     <Content Include="Content\images\banner2.jpg" />
@@ -1953,6 +1955,7 @@
     <Content Include="Content\owlcarousel\owl.carousel.js" />
     <Content Include="Content\owlcarousel\owl.carousel.min.js" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="Content\style.css" />
     <Content Include="Content\video\video.mp4" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -2060,6 +2063,7 @@
     <Content Include="Views\Giohang\GiohangPartial.cshtml" />
     <Content Include="Views\Giohang\Dathang.cshtml" />
     <Content Include="Views\Giohang\Xacnhandonhang.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
