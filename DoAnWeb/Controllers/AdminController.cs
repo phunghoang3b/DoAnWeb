@@ -93,6 +93,10 @@ namespace DoAnWeb.Controllers
                     //Lưu đường dẫn của file
                     var path = Path.Combine(Server.MapPath("~/Content/Hinhsanpham"), fileName);
                     //Kiểm tra hình ảnh tồn tại chưa?
+                    string min = DateTime.Now.ToString("mm");
+                    string sec = DateTime.Now.ToString("ss");
+                    string MaSanPham = "S" + "" + min + "" + sec;
+                    sanpham.MaSP = MaSanPham;
                     if (System.IO.File.Exists(path))
                         ViewBag.Thongbao = "Hình ảnh đã tồn tại";
                     else
@@ -107,6 +111,20 @@ namespace DoAnWeb.Controllers
                 }
                 return RedirectToAction("Sanpham");
             }
+        }
+
+        //Hiển thị sản phẩm
+        public ActionResult Chitietsanpham(string id)
+        {
+            //Lấy ra đối tượng sản phẩm theo mã 
+            tblSanPham sanpham = db.tblSanPhams.SingleOrDefault(n => n.MaSP == id);
+            ViewBag.MaSP = sanpham.MaSP;
+            if (sanpham == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(sanpham);
         }
     }
 }
