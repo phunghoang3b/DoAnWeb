@@ -1,6 +1,7 @@
 ﻿using DoAnWeb.Models;
 using PagedList;
 using System;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -69,9 +70,43 @@ namespace DoAnWeb.Controllers
             return View();
         }
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Themmoisanpham(tblSanPham sanpham, HttpPostedFileBase fileupload)
         {
-            return View();
+            //Đưa du liệu vào dropdownload
+            ViewBag.MaLoai = new SelectList(db.tblLoaiSanPhams.ToList().OrderBy(n => n.TenLoai), "MaLoai", "TenLoai");
+            ViewBag.MaTH = new SelectList(db.tblThuongHieus.ToList().OrderBy(n => n.TenTH), "MaTH", "TenTH");
+            ViewBag.MaNCC = new SelectList(db.tblNhaCungCaps.ToList().OrderBy(n => n.TenNCC), "MaNCC", "TenNCC");
+            //Kiểm tra đường dẫn file
+            if (fileupload == null)
+            {
+                ViewBag.Thongbao = "Vui lòng chọn lại đường dẫn";
+                return View();
+            }
+            //Thêm vào CSDL
+            else
+            {
+                if (ModelState.IsValid)
+                {
+                    //Lưu tên file, lưu ý bổ sung thư viện using System.IO;
+                    var fileName = Path.GetFileName(fileupload.FileName);
+                    //Lưu đường dẫn của file
+                    var path = Path.Combine(Server.MapPath("~/Content/Hinhsanpham"), fileName);
+                    //Kiểm tra hình ảnh tồn tại chưa?
+                    if (System.IO.File.Exists(path))
+                        ViewBag.Thongbao = "Hình ảnh đã tồn tại";
+                    else
+                    {
+                        //Lưu hình ảnh vào đường dẫn 
+                        fileupload.SaveAs(path);
+                    }
+                    sanpham.HinhAnh = fileName;
+                    //Lưu vào CSDL
+                    db.tblSanPhams.InsertOnSubmit(sanpham);
+                    db.SubmitChanges();
+                }
+                return RedirectToAction("Sanpham");
+            }
         }
     }
 }
