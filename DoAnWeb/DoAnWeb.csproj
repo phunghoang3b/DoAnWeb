@@ -1998,6 +1998,7 @@
     <Content Include="Content\images\blog3.jpg" />
     <Content Include="Content\images\brand.png" />
     <Content Include="Content\images\corona.jpg" />
+    <Content Include="Content\images\delete.gif" />
     <Content Include="Content\images\driving.jpg" />
     <Content Include="Content\images\EA.jpg" />
     <Content Include="Content\images\facebook.png" />
@@ -2342,6 +2343,8 @@
     <Content Include="Scripts\tinymce\skins\ui\oxide-dark\fonts\tinymce-mobile.woff" />
     <Content Include="Scripts\tinymce\langs\README.md" />
     <Content Include="Views\Admin\Chitietsanpham.cshtml" />
+    <Content Include="Views\Admin\Xoasanpham.cshtml" />
+    <Content Include="Views\Admin\Suasanpham.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

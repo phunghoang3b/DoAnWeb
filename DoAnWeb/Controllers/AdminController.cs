@@ -126,5 +126,90 @@ namespace DoAnWeb.Controllers
             }
             return View(sanpham);
         }
+
+        //Xóa sản phẩm
+        [HttpGet]
+        public ActionResult Xoasanpham(string id)
+        {
+            //Lấy ra đối tượng sản phẩm cần xóa theo mã 
+            tblSanPham sanpham = db.tblSanPhams.SingleOrDefault(n => n.MaSP == id);
+            ViewBag.MaSP = sanpham.MaSP;
+            if (sanpham == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(sanpham);
+        }
+        [HttpPost, ActionName("Xoasanpham")]
+        public ActionResult Xacnhanxoa(string id)
+        {
+            tblSanPham sanpham = db.tblSanPhams.SingleOrDefault(n => n.MaSP == id);
+            ViewBag.MaSP = sanpham.MaSP;
+            if (sanpham == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            db.tblSanPhams.DeleteOnSubmit(sanpham);
+            db.SubmitChanges();
+            return RedirectToAction("Sanpham");
+        }
+        //Chỉnh sửa sản phẩm 
+        [HttpGet]
+        public ActionResult Suasanpham(string id)
+        {
+            //lay ra doi tuong san pham theo ma
+            tblSanPham sanpham = db.tblSanPhams.SingleOrDefault(n => n.MaSP == id);
+            if (sanpham == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            //Dua du lieu vao Dropdownlist
+            //Lay ds tu table loai san pham, sắp xếp tang dan theo ten loai san pham, chọn lấy giá trị hiện ra tên 
+            ViewBag.MaLoai = new SelectList(db.tblLoaiSanPhams.ToList().OrderBy(n => n.TenLoai), "MaLoai", "TenLoai");
+            ViewBag.MaTH = new SelectList(db.tblThuongHieus.ToList().OrderBy(n => n.TenTH), "MaTH", "TenTH");
+            ViewBag.MaNCC = new SelectList(db.tblNhaCungCaps.ToList().OrderBy(n => n.TenNCC), "MaNCC", "TenNCC");
+            return View(sanpham);
+        }
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult Suasanpham(tblSanPham sanpham, HttpPostedFileBase fileupload)
+        {
+            ViewBag.MaLoai = new SelectList(db.tblLoaiSanPhams.ToList().OrderBy(n => n.TenLoai), "MaLoai", "TenLoai");
+            ViewBag.MaTH = new SelectList(db.tblThuongHieus.ToList().OrderBy(n => n.TenTH), "MaTH", "TenTH");
+            ViewBag.MaNCC = new SelectList(db.tblNhaCungCaps.ToList().OrderBy(n => n.TenNCC), "MaNCC", "TenNCC");
+            //Kiem tra duong dan file
+            if (fileupload == null)
+            {
+                ViewBag.Thongbao = "Vui lòng chọn hình ảnh";
+                return View();
+            }
+            //Them vao csdl
+            else
+            {
+                if (ModelState.IsValid)
+                {
+                    //Luu ten file, luu y bo sung thu vien using system.io;
+                    var fileName = Path.GetFileName(fileupload.FileName);
+                    //Luu duong dan cua file
+                    var path = Path.Combine(Server.MapPath("~/Content/Hinhsanpham"), fileName);
+                    //Kiem tra hinh anh ton tai chua
+                    if (System.IO.File.Exists(path))
+                        ViewBag.Thongbao = "Hình ảnh đã tồn tại";
+                    else
+                    {
+                        //luu hinh anh vao duong dan
+                        fileupload.SaveAs(path);
+                    }
+                    sanpham.HinhAnh = fileName;
+                    //luu vao csdl
+                    UpdateModel(sanpham);
+                    db.SubmitChanges();
+                }
+                return RedirectToAction("Sanpham");
+            }
+        }
     }
 }
