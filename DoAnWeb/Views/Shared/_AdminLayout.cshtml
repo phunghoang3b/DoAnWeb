@@ -1,52 +1,50 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<meta charset="utf-8" />
-		<title>Dashboard - Ace Admin</title>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title>Game Store K3T</title>
 
-		<meta name="description" content="overview &amp; stats" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="description" content="overview &amp; stats" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="shortcut icon" href="~/Content/images/favicon.ico" type="image/x-icon">
 
-		<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="/assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/font-awesome/4.5.0/css/font-awesome.min.css" />
 
-		<!-- page specific plugin styles -->
+    <!-- page specific plugin styles -->
+    <!-- text fonts -->
+    <link rel="stylesheet" href="/assets/css/fonts.googleapis.com.css" />
 
-		<!-- text fonts -->
-		<link rel="stylesheet" href="/assets/css/fonts.googleapis.com.css" />
+    <!-- ace styles -->
+    <link rel="stylesheet" href="/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
 
-		<!-- ace styles -->
-		<link rel="stylesheet" href="/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+    <![endif]-->
+    <link rel="stylesheet" href="/assets/css/ace-skins.min.css" />
+    <link rel="stylesheet" href="/assets/css/ace-rtl.min.css" />
 
-		<!--[if lte IE 9]>
-			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
-		<![endif]-->
-		<link rel="stylesheet" href="/assets/css/ace-skins.min.css" />
-		<link rel="stylesheet" href="/assets/css/ace-rtl.min.css" />
+    <!--[if lte IE 9]>
+      <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+    <![endif]-->
+    <!-- inline styles related to this page -->
+    <!-- ace settings handler -->
+    <script src="/assets/js/ace-extra.min.js"></script>
 
-		<!--[if lte IE 9]>
-		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
-		<![endif]-->
-
-		<!-- inline styles related to this page -->
-
-		<!-- ace settings handler -->
-		<script src="/assets/js/ace-extra.min.js"></script>
-
-		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
-
-		<!--[if lte IE 8]>
-		<script src="assets/js/html5shiv.min.js"></script>
-		<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
-        <script src="~/Scripts/tinymce/tinymce.js"></script>
-		<script>tinymce.init({
-                selector: 'textarea',  // change this value according to your HTML
-                auto_focus: 'element1'
-            });</script>
-	</head>
+    <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+    <!--[if lte IE 8]>
+    <script src="assets/js/html5shiv.min.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="~/Scripts/tinymce/tinymce.js"></script>
+    <script>
+    tinymce.init({
+            selector: 'textarea',  // change this value according to your HTML
+            auto_focus: 'element1'
+        });</script>
+</head>
 
 	<body class="no-skin">
 		<div id="navbar" class="navbar navbar-default          ace-save-state">
@@ -65,7 +63,7 @@
 					<a href="index.html" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
-							Ace Admin
+							Game Store K3T
 						</small>
 					</a>
 				</div>
@@ -329,10 +327,10 @@
 
 						<li class="light-blue dropdown-modal">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="/assets/images/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="~/Content/images/team2.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>Welcome,</small>
-									Jason
+									Khải
 								</span>
 
 								<i class="ace-icon fa fa-caret-down"></i>
@@ -410,9 +408,9 @@
 
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="index.html">
+						<a href="#">
 							<i class="menu-icon fa fa-tachometer"></i>
-							<span class="menu-text"> Dashboard </span>
+							<span class="menu-text"> Trang chủ </span>
 						</a>
 
 						<b class="arrow"></b>
@@ -422,7 +420,7 @@
 						<a href="#" class="dropdown-toggle">
 							<i class="menu-icon fa fa-desktop"></i>
 							<span class="menu-text">
-								UI &amp; Elements
+								Quản Lý Danh Mục
 							</span>
 
 							<b class="arrow fa fa-angle-down"></b>
@@ -430,190 +428,131 @@
 
 						<b class="arrow"></b>
 
-						<ul class="submenu">
-							<li class="">
-								<a href="#" class="dropdown-toggle">
-									<i class="menu-icon fa fa-caret-right"></i>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="menu-icon fa fa-caret-right"></i>
 
-									Layouts
-									<b class="arrow fa fa-angle-down"></b>
-								</a>
+                                    Sản Phẩm
+                                    <b class="arrow fa fa-angle-down"></b>
+                                </a>
 
-								<b class="arrow"></b>
+                                <b class="arrow"></b>
 
-								<ul class="submenu">
-									<li class="">
-										<a href="top-menu.html">
-											<i class="menu-icon fa fa-caret-right"></i>
-											Top Menu
-										</a>
+                                <ul class="submenu">
+                                    <li class="">
+                                        <a href="@Url.Action("Themmoisanpham", "Admin")">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Thêm Sản Phẩm
+                                        </a>
 
-										<b class="arrow"></b>
-									</li>
+                                        <b class="arrow"></b>
+                                    </li>
 
-									<li class="">
-										<a href="two-menu-1.html">
-											<i class="menu-icon fa fa-caret-right"></i>
-											Two Menus 1
-										</a>
+                                    <li class="">
+                                        <a href="@Url.Action("Sanpham", "Admin")">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Danh Sách Sản Phẩm
+                                        </a>
 
-										<b class="arrow"></b>
-									</li>
+                                        <b class="arrow"></b>
+                                    </li>
+                                </ul>
+                            </li>
 
-									<li class="">
-										<a href="two-menu-2.html">
-											<i class="menu-icon fa fa-caret-right"></i>
-											Two Menus 2
-										</a>
+                            <li class="">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="menu-icon fa fa-caret-right"></i>
 
-										<b class="arrow"></b>
-									</li>
+                                    Nhà Cung Cấp
+                                    <b class="arrow fa fa-angle-down"></b>
+                                </a>
 
-									<li class="">
-										<a href="mobile-menu-1.html">
-											<i class="menu-icon fa fa-caret-right"></i>
-											Default Mobile Menu
-										</a>
+                                <b class="arrow"></b>
 
-										<b class="arrow"></b>
-									</li>
+                                <ul class="submenu">
+                                    <li class="">
+                                        <a href="top-menu.html">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Thêm Nhà Cung Cấp
+                                        </a>
 
-									<li class="">
-										<a href="mobile-menu-2.html">
-											<i class="menu-icon fa fa-caret-right"></i>
-											Mobile Menu 2
-										</a>
+                                        <b class="arrow"></b>
+                                    </li>
 
-										<b class="arrow"></b>
-									</li>
+                                    <li class="">
+                                        <a href="two-menu-1.html">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Danh Sách Nhà Cung Cấp
+                                        </a>
 
-									<li class="">
-										<a href="mobile-menu-3.html">
-											<i class="menu-icon fa fa-caret-right"></i>
-											Mobile Menu 3
-										</a>
+                                        <b class="arrow"></b>
+                                    </li>
+                                </ul>
+                            </li>
 
-										<b class="arrow"></b>
-									</li>
-								</ul>
-							</li>
+                            <li class="">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="menu-icon fa fa-caret-right"></i>
 
-							<li class="">
-								<a href="typography.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Typography
-								</a>
+                                    Thương Hiệu
+                                    <b class="arrow fa fa-angle-down"></b>
+                                </a>
 
-								<b class="arrow"></b>
-							</li>
+                                <b class="arrow"></b>
 
-							<li class="">
-								<a href="elements.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Elements
-								</a>
+                                <ul class="submenu">
+                                    <li class="">
+                                        <a href="top-menu.html">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Thêm Thương Hiệu
+                                        </a>
 
-								<b class="arrow"></b>
-							</li>
+                                        <b class="arrow"></b>
+                                    </li>
 
-							<li class="">
-								<a href="buttons.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Buttons &amp; Icons
-								</a>
+                                    <li class="">
+                                        <a href="two-menu-1.html">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Danh Sách Thương Hiệu
+                                        </a>
 
-								<b class="arrow"></b>
-							</li>
+                                        <b class="arrow"></b>
+                                    </li>
+                                </ul>
+                            </li>
 
-							<li class="">
-								<a href="content-slider.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Content Sliders
-								</a>
+                            <li class="">
+                                <a href="#" class="dropdown-toggle">
+                                    <i class="menu-icon fa fa-caret-right"></i>
 
-								<b class="arrow"></b>
-							</li>
+                                    Loại Sản Phẩm
+                                    <b class="arrow fa fa-angle-down"></b>
+                                </a>
 
-							<li class="">
-								<a href="treeview.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Treeview
-								</a>
+                                <b class="arrow"></b>
 
-								<b class="arrow"></b>
-							</li>
+                                <ul class="submenu">
+                                    <li class="">
+                                        <a href="top-menu.html">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Thêm Loại Sản Phẩm 
+                                        </a>
 
-							<li class="">
-								<a href="jquery-ui.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									jQuery UI
-								</a>
+                                        <b class="arrow"></b>
+                                    </li>
 
-								<b class="arrow"></b>
-							</li>
+                                    <li class="">
+                                        <a href="two-menu-1.html">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Danh Sách Loại Sản Phẩm
+                                        </a>
 
-							<li class="">
-								<a href="nestable-list.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Nestable Lists
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="#" class="dropdown-toggle">
-									<i class="menu-icon fa fa-caret-right"></i>
-
-									Three Level Menu
-									<b class="arrow fa fa-angle-down"></b>
-								</a>
-
-								<b class="arrow"></b>
-
-								<ul class="submenu">
-									<li class="">
-										<a href="#">
-											<i class="menu-icon fa fa-leaf green"></i>
-											Item #1
-										</a>
-
-										<b class="arrow"></b>
-									</li>
-
-									<li class="">
-										<a href="#" class="dropdown-toggle">
-											<i class="menu-icon fa fa-pencil orange"></i>
-
-											4th level
-											<b class="arrow fa fa-angle-down"></b>
-										</a>
-
-										<b class="arrow"></b>
-
-										<ul class="submenu">
-											<li class="">
-												<a href="#">
-													<i class="menu-icon fa fa-plus purple"></i>
-													Add Product
-												</a>
-
-												<b class="arrow"></b>
-											</li>
-
-											<li class="">
-												<a href="#">
-													<i class="menu-icon fa fa-eye pink"></i>
-													View Products
-												</a>
-
-												<b class="arrow"></b>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
+                                        <b class="arrow"></b>
+                                    </li>
+                                </ul>
+                            </li>                        
+                        </ul>
 					</li>
 
 					<li class="">
@@ -646,246 +585,7 @@
 							</li>
 						</ul>
 					</li>
-
-					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-pencil-square-o"></i>
-							<span class="menu-text"> Forms </span>
-
-							<b class="arrow fa fa-angle-down"></b>
-						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="">
-								<a href="form-elements.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Form Elements
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="form-elements-2.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Form Elements 2
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="form-wizard.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Wizard &amp; Validation
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="wysiwyg.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Wysiwyg &amp; Markdown
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="dropzone.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Dropzone File Upload
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-						</ul>
-					</li>
-
-					<li class="">
-						<a href="widgets.html">
-							<i class="menu-icon fa fa-list-alt"></i>
-							<span class="menu-text"> Widgets </span>
-						</a>
-
-						<b class="arrow"></b>
-					</li>
-
-					<li class="">
-						<a href="calendar.html">
-							<i class="menu-icon fa fa-calendar"></i>
-
-							<span class="menu-text">
-								Calendar
-
-								<span class="badge badge-transparent tooltip-error" title="2 Important Events">
-									<i class="ace-icon fa fa-exclamation-triangle red bigger-130"></i>
-								</span>
-							</span>
-						</a>
-
-						<b class="arrow"></b>
-					</li>
-
-					<li class="">
-						<a href="gallery.html">
-							<i class="menu-icon fa fa-picture-o"></i>
-							<span class="menu-text"> Gallery </span>
-						</a>
-
-						<b class="arrow"></b>
-					</li>
-
-					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-tag"></i>
-							<span class="menu-text"> More Pages </span>
-
-							<b class="arrow fa fa-angle-down"></b>
-						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="">
-								<a href="profile.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									User Profile
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="inbox.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Inbox
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="pricing.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Pricing Tables
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="invoice.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Invoice
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="timeline.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Timeline
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="search.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Search Results
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="email.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Email Templates
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="login.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Login &amp; Register
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-						</ul>
-					</li>
-
-					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-file-o"></i>
-
-							<span class="menu-text">
-								Other Pages
-
-								<span class="badge badge-primary">5</span>
-							</span>
-
-							<b class="arrow fa fa-angle-down"></b>
-						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="">
-								<a href="faq.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									FAQ
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="error-404.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Error 404
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="error-500.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Error 500
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="grid.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Grid
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="blank.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Blank Page
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-						</ul>
-					</li>
+		
 				</ul><!-- /.nav-list -->
 
 				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
@@ -899,9 +599,9 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="#">Home</a>
+								<a href="#"></a>
 							</li>
-							<li class="active">Dashboard</li>
+							<li class="active">Trang chủ</li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
