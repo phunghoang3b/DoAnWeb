@@ -1961,6 +1961,9 @@
     <Content Include="Content\Hinhsanpham\xone4.jpg" />
     <Content Include="Content\Hinhsanpham\xone5.jpg" />
     <Content Include="Content\imagedetail\backgoundadmin.jpg" />
+    <Content Include="Content\imagedetail\Loai1.jpg" />
+    <Content Include="Content\imagedetail\Loai2.jpg" />
+    <Content Include="Content\imagedetail\Loai3.jpg" />
     <Content Include="Content\images\ad1.jpg" />
     <Content Include="Content\images\ad2.jpg" />
     <Content Include="Content\images\ad3.png" />
@@ -2329,6 +2332,8 @@
     <Content Include="Views\Admin\Chitietsanpham.cshtml" />
     <Content Include="Views\Admin\Xoasanpham.cshtml" />
     <Content Include="Views\Admin\Suasanpham.cshtml" />
+    <Content Include="Views\Admin\Loaisanpham.cshtml" />
+    <Content Include="Views\Admin\Themloaisanpham.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

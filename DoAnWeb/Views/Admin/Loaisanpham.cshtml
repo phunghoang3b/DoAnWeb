@@ -1,0 +1,35 @@
+﻿@model IEnumerable<DoAnWeb.Models.tblLoaiSanPham>
+
+@{
+    ViewBag.Title = "Loaisanpham";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="text-align:center">Quản Lý Loại Sản Phẩm</h2>
+
+
+<table class="table" style="width:39%;margin-left:356px">
+    <tr style="border:1px solid">
+        <th>
+            Loại sản phẩm
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr style="border: 1px solid">
+        <td>
+            @Html.DisplayFor(modelItem => item.TenLoai)
+        </td>
+        <td style="position:absolute;margin-left:60px;border:1px solid">
+            @Html.ActionLink("Sửa", "Sualoaisp", new { id=item.MaLoai }) |
+            @Html.ActionLink("Xóa", "Xoaloaisp", new { id=item.MaLoai })
+        </td>
+    </tr>
+}
+
+</table>
+<p style="background-color:orange;border-radius:5px;font-size:17px;text-align:center;margin-left:45%;width:7%">
+    @Html.ActionLink("Thêm Mới", "Themloaisanpham",null, new { @class = "colortext"})
+    <style>a.colortext{text-decoration:none}</style>
+</p>

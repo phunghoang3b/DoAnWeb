@@ -211,5 +211,16 @@ namespace DoAnWeb.Controllers
                 return RedirectToAction("Sanpham");
             }
         }
+
+        //Phần quản lý Loại Sản Phẩm 
+        public ActionResult Loaisanpham()
+        {
+            return View(db.tblLoaiSanPhams.ToList());
+        }
+        [HttpGet]
+        public ActionResult Themloaisanpham()
+        {
+            return View();
+        }
     }
 }
