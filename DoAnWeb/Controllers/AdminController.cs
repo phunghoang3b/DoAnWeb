@@ -222,5 +222,71 @@ namespace DoAnWeb.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult Themloaisanpham(FormCollection collection, tblLoaiSanPham lsp)
+        {
+            //Tạo biến loaisanpham và gán giá trị của người dùng nhập vào
+            var loaisp = collection["TenLoai"];
+            //nếu loaisanpham có giá trị == null (để trống)
+            if (string.IsNullOrEmpty(loaisp))
+            {
+                ViewData["Loi"] = "Tên loại sản phẩm không được để trống";
+            }
+            else
+            {
+                string min = DateTime.Now.ToString("mm");
+                string sec = DateTime.Now.ToString("ss");
+                string MaLoaiSanPham = "L" + "" + min + "" + sec;
+                lsp.MaLoai = MaLoaiSanPham;
+                lsp.TenLoai = loaisp;
+                db.tblLoaiSanPhams.InsertOnSubmit(lsp);
+                db.SubmitChanges();
+                return RedirectToAction("Loaisanpham");
+            }
+            return this.Themloaisanpham();
+        }
+        //Sua loai san pham
+        [HttpGet]
+        public ActionResult Sualoaisp(string id)
+        {
+            var loaisp = db.tblLoaiSanPhams.First(m => m.MaLoai == id);
+            return View(loaisp);
+        }
+        [HttpPost]
+        public ActionResult Sualoaisp(string id, FormCollection collection)
+        {
+            var loaisp = db.tblLoaiSanPhams.First(m => m.MaLoai == id);
+            var lsp = collection["TenLoai"];
+            loaisp.MaLoai = id;
+            if (string.IsNullOrEmpty(lsp))
+            {
+                ViewData["Loi"] = "Loại sản phẩm  không được để trống";
+            }
+            else
+            {
+                loaisp.TenLoai = lsp;
+                UpdateModel(lsp);
+                db.SubmitChanges();
+                return RedirectToAction("Loaisanpham");
+            }
+            return this.Sualoaisp(id);
+        }
+        [HttpGet]
+        public ActionResult Xoaloaisp(string id)
+        {
+            var loaisp = db.tblLoaiSanPhams.First(m => m.MaLoai == id);
+            return View(loaisp);
+        }
+        [HttpPost]
+        public ActionResult Xoaloaisp(string id, FormCollection collection)
+        {
+            var loaisp = db.tblLoaiSanPhams.Where(m => m.MaLoai == id).First();
+            db.tblLoaiSanPhams.DeleteOnSubmit(loaisp);
+            db.SubmitChanges();
+            return RedirectToAction("Loaisanpham");
+        }
+
+        //Quản lý nhà cung cấp
+
     }
 }

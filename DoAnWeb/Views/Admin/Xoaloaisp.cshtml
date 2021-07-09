@@ -1,0 +1,50 @@
+﻿@model DoAnWeb.Models.tblLoaiSanPham
+
+@{
+    ViewBag.Title = "Xoaloaisp";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="text-align:center">Xóa Loại Sản Phẩm</h2>
+
+<h3 style="text-align:center">Bạn thực sự muốn xóa loại sản phẩm này?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên loại sản phẩm:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenLoai)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" style="margin-left:562px" />
+            @Html.ActionLink("Trở Về", "Loaisanpham", null, new { @class = "textnone" })
+            <style>
+                a.textnone {
+                    font-size: 14px;
+                    color: white;
+                    position: absolute;
+                    text-decoration: none;
+                    background-color: #ABBAC3;
+                    height: 42px;
+                    width: 64px;
+                    text-align: center;
+                    padding-top: 11px;
+                    margin-left: 5px;
+                }
+            </style>
+        </div>
+    }
+    <div class="delete-image">
+        <img src="~/Content/images/delete.gif" style="width:28%;margin-left:35.6%" />
+    </div>
+</div>

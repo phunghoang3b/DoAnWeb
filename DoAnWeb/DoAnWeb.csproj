@@ -2334,6 +2334,8 @@
     <Content Include="Views\Admin\Suasanpham.cshtml" />
     <Content Include="Views\Admin\Loaisanpham.cshtml" />
     <Content Include="Views\Admin\Themloaisanpham.cshtml" />
+    <Content Include="Views\Admin\Sualoaisp.cshtml" />
+    <Content Include="Views\Admin\Xoaloaisp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,50 @@
+﻿@model DoAnWeb.Models.tblLoaiSanPham
+
+@{
+    ViewBag.Title = "Sualoaisp";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="text-align:center">Chỉnh Sửa Thông Tin Loại Sản Phẩm</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.MaLoai)
+
+        <div class="form-group" style="margin-left:21%">
+            @Html.LabelFor(model => model.TenLoai, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10" style="width:40%">
+                @Html.EditorFor(model => model.TenLoai, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TenLoai, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10" style="margin-left:43.6%">
+                <input type="submit" value="Lưu" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div style="background-color: #ABBAC3; position: absolute; margin-left: 47.9%; top: 64.2%; width: 7%; height: 19.1%;">
+    @Html.ActionLink("Trở Về", "Loaisanpham", null, new { @class = "textnone" })
+    <style>
+        a.textnone {
+            font-size: 14px;
+            color: white;
+            margin-left: 25px;
+            margin-top: 10px;
+            position: absolute;
+            text-decoration: none;
+        }
+    </style>
+    <img src="~/Content/imagedetail/Loai1.jpg" style="width: 450%; right: 315px; position: absolute; top: 303%;" />
+    <img src="~/Content/imagedetail/Loai2.jpg" style="width: 450%; right: -132%; position: absolute; top: 303%;" />
+    <img src="~/Content/imagedetail/Loai3.jpg" style="width: 450%; position: absolute; right: -603%; top: 303%;" />
+</div>
