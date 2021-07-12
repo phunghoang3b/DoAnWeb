@@ -1964,6 +1964,10 @@
     <Content Include="Content\imagedetail\Loai1.jpg" />
     <Content Include="Content\imagedetail\Loai2.jpg" />
     <Content Include="Content\imagedetail\Loai3.jpg" />
+    <Content Include="Content\imagedetail\ncc1.jpg" />
+    <Content Include="Content\imagedetail\ncc2.jpg" />
+    <Content Include="Content\imagedetail\ncc3.jpeg" />
+    <Content Include="Content\imagedetail\ncc4.jpg" />
     <Content Include="Content\images\ad1.jpg" />
     <Content Include="Content\images\ad2.jpg" />
     <Content Include="Content\images\ad3.png" />
@@ -2336,6 +2340,10 @@
     <Content Include="Views\Admin\Themloaisanpham.cshtml" />
     <Content Include="Views\Admin\Sualoaisp.cshtml" />
     <Content Include="Views\Admin\Xoaloaisp.cshtml" />
+    <Content Include="Views\Admin\Nhacungcap.cshtml" />
+    <Content Include="Views\Admin\Themnhacungcap.cshtml" />
+    <Content Include="Views\Admin\Suanhacungcap.cshtml" />
+    <Content Include="Views\Admin\Xoanhacungcap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

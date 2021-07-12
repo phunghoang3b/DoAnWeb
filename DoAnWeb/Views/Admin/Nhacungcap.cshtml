@@ -1,0 +1,57 @@
+﻿@model IEnumerable<DoAnWeb.Models.tblNhaCungCap>
+
+@{
+    ViewBag.Title = "Nhacungcap";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="text-align:center;margin-bottom:34px">Quản Lý Nhà Cung Cấp</h2>
+
+<table class="table">
+    <tr>
+        <th style="border:1px solid;font-size: 15px;text-align: center;}">
+            Tên nhà cung cấp
+        </th>
+        <th style="border:1px solid;font-size: 15px;text-align: center;}">
+            Địa chỉ
+        </th>
+        <th style="border:1px solid;font-size: 15px;text-align: center;}">
+            Số điện thoại
+        </th>
+        <th style="border:1px solid;font-size: 15px;text-align: center;}">
+            Chức năng
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td style="border:1px solid;text-align:center">
+            @Html.DisplayFor(modelItem => item.TenNCC)
+        </td>
+        <td style="border:1px solid">
+            @Html.DisplayFor(modelItem => item.DiaChi)
+        </td>
+        <td style="border:1px solid;text-align:center">
+            @Html.DisplayFor(modelItem => item.SDT)
+        </td>
+        <td style="border:1px solid;text-align:center">
+            @Html.ActionLink("Sửa", "Suanhacungcap", new { id=item.MaNCC }) |
+            @Html.ActionLink("Xóa", "Xoanhacungcap", new { id=item.MaNCC })
+        </td>
+    </tr>
+}
+
+</table>
+<p style="background-color: orange; border-radius: 5px; font-size: 17px; text-align: center;width: 10%;margin-left: 45%;">
+    @Html.ActionLink("Thêm Mới", "Themnhacungcap", null, new { @class = "colortext" })
+    <style>
+        a.colortext {
+            text-decoration: none;
+            color:black;
+            font-weight:bold;
+        }
+    </style>
+</p>
+<div>
+    <img src="~/Content/imagedetail/ncc4.jpg" style="position: absolute; width: 45%; height: 103%; left: 26.9%;"/>
+</div>

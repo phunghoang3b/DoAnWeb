@@ -287,6 +287,100 @@ namespace DoAnWeb.Controllers
         }
 
         //Quản lý nhà cung cấp
-
+        public ActionResult Nhacungcap()
+        {
+            return View(db.tblNhaCungCaps.ToList());
+        }
+        [HttpGet]
+        public ActionResult Themnhacungcap()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Themnhacungcap(FormCollection collection, tblNhaCungCap ncc)
+        {
+            var tencungcap = collection["TenNCC"];
+            var diachi = collection["DiaChi"];
+            var sdt = collection["SDT"];
+            if (string.IsNullOrEmpty(tencungcap))
+            {
+                ViewData["Loi1"] = "Tên nhà cung cấp không được để trống";
+            }
+            else if (string.IsNullOrEmpty(diachi))
+            {
+                ViewData["Loi2"] = "Phải nhập địa chỉ nhà cung cấp";
+            }
+            else if (string.IsNullOrEmpty(sdt))
+            {
+                ViewData["Loi3"] = "Số điện thoại không được để trống";
+            }
+            else
+            {
+                string min = DateTime.Now.ToString("mm");
+                string sec = DateTime.Now.ToString("ss");
+                string MaNhaCungCap = "N" + "" + min + "" + sec;
+                ncc.MaNCC = MaNhaCungCap;
+                ncc.TenNCC = tencungcap;
+                ncc.DiaChi = diachi;
+                ncc.SDT = sdt;
+                db.tblNhaCungCaps.InsertOnSubmit(ncc);
+                db.SubmitChanges();
+                return RedirectToAction("Nhacungcap");
+            }
+            return this.Themnhacungcap();
+        }
+        //Sua nha cung cap
+        [HttpGet]
+        public ActionResult Suanhacungcap(string id)
+        {
+            var nhacungcap = db.tblNhaCungCaps.First(m => m.MaNCC == id);
+            return View(nhacungcap);
+        }
+        [HttpPost]
+        public ActionResult Suanhacungcap(string id, FormCollection collection)
+        {
+            var ncc = db.tblNhaCungCaps.First(m => m.MaNCC == id);
+            var tenncc = collection["TenNCC"];
+            var diachi = collection["DiaChi"];
+            var sdt = collection["SDT"];
+            ncc.MaNCC = id;
+            if (string.IsNullOrEmpty(tenncc))
+            {
+                ViewData["Loi1"] = "Tên nhà cung cấp không được để trống";
+            }
+            else if (string.IsNullOrEmpty(diachi))
+            {
+                ViewData["Loi2"] = "Phải nhập địa chỉ nhà cung cấp";
+            }
+            else if (string.IsNullOrEmpty(sdt))
+            {
+                ViewData["Loi3"] = "Số điện thoại không được để trống";
+            }
+            else
+            {
+                ncc.TenNCC = tenncc;
+                ncc.DiaChi = diachi;
+                ncc.SDT = sdt;
+                UpdateModel(ncc);
+                db.SubmitChanges();
+                return RedirectToAction("Nhacungcap");
+            }
+            return this.Suanhacungcap(id);
+        }
+        //xoa nha cung cap
+        [HttpGet]
+        public ActionResult Xoanhacungcap(string id)
+        {
+            var ncc = db.tblNhaCungCaps.First(m => m.MaNCC == id);
+            return View(ncc);
+        }
+        [HttpPost]
+        public ActionResult Xoanhacungcap(string id, FormCollection collection)
+        {
+            var ncc = db.tblNhaCungCaps.Where(m => m.MaNCC == id).First();
+            db.tblNhaCungCaps.DeleteOnSubmit(ncc);
+            db.SubmitChanges();
+            return RedirectToAction("Nhacungcap");
+        }
     }
 }
