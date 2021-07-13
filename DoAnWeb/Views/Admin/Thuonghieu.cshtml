@@ -1,0 +1,33 @@
+﻿@model IEnumerable<DoAnWeb.Models.tblThuongHieu>
+
+@{
+    ViewBag.Title = "Thuonghieu";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Thuonghieu</h2>
+
+<p>
+    @Html.ActionLink("Thêm Mới", "Themmoithuonghieu")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenTH)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenTH)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Suathuonghieu", new { id=item.MaTH }) |
+            @Html.ActionLink("Xóa", "Xoathuonghieu", new { id=item.MaTH })
+        </td>
+    </tr>
+}
+
+</table>

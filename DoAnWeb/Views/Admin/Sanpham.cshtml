@@ -33,7 +33,7 @@
         <th style="width: 130px;text-align:center"> Nhà cung cấp</th>
         <th style="width: 130px;text-align:center"> Thương hiệu</th>
         <th style="width: 150px;text-align:center"> Loại</th>
-        <th style="width: 180px;text-align:center">  </th>
+        <th style="width: 180px;text-align:center"> Chức năng </th>
     </tr>
 
 @foreach (var item in Model) {
@@ -50,7 +50,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.NgayCapNhat)
         </td>
-        <td>
+        <td style="text-align: center">
             <img class="product__panel-img" src="@Url.Content("~/Content/Hinhsanpham/"+ item.HinhAnh)" style="width:70%"/>
         </td>
         <td>

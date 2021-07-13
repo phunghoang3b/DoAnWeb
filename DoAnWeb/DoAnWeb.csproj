@@ -2344,6 +2344,10 @@
     <Content Include="Views\Admin\Themnhacungcap.cshtml" />
     <Content Include="Views\Admin\Suanhacungcap.cshtml" />
     <Content Include="Views\Admin\Xoanhacungcap.cshtml" />
+    <Content Include="Views\Admin\Thuonghieu.cshtml" />
+    <Content Include="Views\Admin\Themmoithuonghieu.cshtml" />
+    <Content Include="Views\Admin\Suathuonghieu.cshtml" />
+    <Content Include="Views\Admin\Xoathuonghieu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
