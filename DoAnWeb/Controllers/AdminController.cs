@@ -454,5 +454,25 @@ namespace DoAnWeb.Controllers
             db.SubmitChanges();
             return RedirectToAction("Thuonghieu");
         }
+
+        //Quản lý khách hàng
+        public ActionResult Khachhang()
+        {
+            return View(db.tblKhacHangs.ToList());
+        }
+        [HttpGet]
+        public ActionResult Xoakhachhang(string id)
+        {
+            var khachhang = db.tblKhacHangs.First(m => m.MaKH == id);
+            return View(khachhang);
+        }
+        [HttpPost]
+        public ActionResult Xoakhachhang(string id, FormCollection collection)
+        {
+            var khachhang = db.tblKhacHangs.Where(m => m.MaKH == id).First();
+            db.tblKhacHangs.DeleteOnSubmit(khachhang);
+            db.SubmitChanges();
+            return RedirectToAction("Khachhang");
+        }
     }
 }

@@ -1968,6 +1968,9 @@
     <Content Include="Content\imagedetail\ncc2.jpg" />
     <Content Include="Content\imagedetail\ncc3.jpeg" />
     <Content Include="Content\imagedetail\ncc4.jpg" />
+    <Content Include="Content\imagedetail\th1.jpg" />
+    <Content Include="Content\imagedetail\th2.jpg" />
+    <Content Include="Content\imagedetail\th3.jpg" />
     <Content Include="Content\images\ad1.jpg" />
     <Content Include="Content\images\ad2.jpg" />
     <Content Include="Content\images\ad3.png" />
@@ -2348,6 +2351,8 @@
     <Content Include="Views\Admin\Themmoithuonghieu.cshtml" />
     <Content Include="Views\Admin\Suathuonghieu.cshtml" />
     <Content Include="Views\Admin\Xoathuonghieu.cshtml" />
+    <Content Include="Views\Admin\Khachhang.cshtml" />
+    <Content Include="Views\Admin\Xoakhachhang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

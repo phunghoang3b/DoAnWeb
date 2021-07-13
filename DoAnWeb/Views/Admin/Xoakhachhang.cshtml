@@ -1,22 +1,46 @@
-﻿@model DoAnWeb.Models.tblNhaCungCap
+﻿@model DoAnWeb.Models.tblKhacHang
 
 @{
-    ViewBag.Title = "Xoanhacungcap";
+    ViewBag.Title = "Xoakhachhang";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2 style="text-align:center">Xóa Nhà Cung Cấp</h2>
+<h2 style="text-align:center">Xóa Khách Hàng</h2>
 
-<h3 style="text-align:center">Bạn thực sự muốn xóa nhà cung cấp này?</h3>
+<h3 style="text-align:center">Bạn thực sự muốn xóa khách hàng này?</h3>
 <div>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            Tên nhà cung cấp:
+            Tên khách hàng:
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.TenNCC)
+            @Html.DisplayFor(model => model.TenKH)
+        </dd>
+
+        <dt>
+            Tài khoản:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+
+        <dt>
+            Mật khẩu:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            Email:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
         </dd>
 
         <dt>
@@ -38,12 +62,12 @@
     </dl>
 
     @using (Html.BeginForm())
-     {
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
             <input type="submit" value="Xóa" class="btn btn-default" style="margin-left:562px" /> |
-            @Html.ActionLink("Trở Về", "Nhacungcap", null, new { @class = "textnone" })
+            @Html.ActionLink("Trở Về", "Khachhang", null, new { @class = "textnone" })
             <style>
                 a.textnone {
                     font-size: 14px;
@@ -59,7 +83,7 @@
                 }
             </style>
         </div>
-     }
+    }
     <div class="delete-image">
         <img src="~/Content/images/delete.gif" style="width: 26%; margin-left: 36.6%;" />
     </div>
