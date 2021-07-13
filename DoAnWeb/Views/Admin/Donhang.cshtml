@@ -1,0 +1,57 @@
+﻿@model IEnumerable<DoAnWeb.Models.tblDonHang>
+
+@{
+    ViewBag.Title = "Donhang";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Donhang</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayLap)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayGiao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dathanhtoan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TinhTrangGiaoHang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayLap)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayGiao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dathanhtoan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TinhTrangGiaoHang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Suadonhang", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Xóa", "Xoadonhang", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

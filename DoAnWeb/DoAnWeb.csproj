@@ -1960,6 +1960,7 @@
     <Content Include="Content\Hinhsanpham\xone3.jpg" />
     <Content Include="Content\Hinhsanpham\xone4.jpg" />
     <Content Include="Content\Hinhsanpham\xone5.jpg" />
+    <Content Include="Content\imagedetail\animation.gif" />
     <Content Include="Content\imagedetail\backgoundadmin.jpg" />
     <Content Include="Content\imagedetail\Loai1.jpg" />
     <Content Include="Content\imagedetail\Loai2.jpg" />
@@ -1967,7 +1968,6 @@
     <Content Include="Content\imagedetail\ncc1.jpg" />
     <Content Include="Content\imagedetail\ncc2.jpg" />
     <Content Include="Content\imagedetail\ncc3.jpeg" />
-    <Content Include="Content\imagedetail\ncc4.jpg" />
     <Content Include="Content\imagedetail\th1.jpg" />
     <Content Include="Content\imagedetail\th2.jpg" />
     <Content Include="Content\imagedetail\th3.jpg" />
@@ -2353,6 +2353,10 @@
     <Content Include="Views\Admin\Xoathuonghieu.cshtml" />
     <Content Include="Views\Admin\Khachhang.cshtml" />
     <Content Include="Views\Admin\Xoakhachhang.cshtml" />
+    <Content Include="Views\Admin\Donhang.cshtml" />
+    <Content Include="Views\Admin\Suadonhang.cshtml" />
+    <Content Include="Views\Post\page2.cshtml" />
+    <Content Include="Views\Post\page3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

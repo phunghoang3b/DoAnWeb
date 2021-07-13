@@ -304,15 +304,15 @@ namespace DoAnWeb.Controllers
             var sdt = collection["SDT"];
             if (string.IsNullOrEmpty(tencungcap))
             {
-                ViewData["Loi1"] = "Tên nhà cung cấp không được để trống";
+                ViewData["Loi"] = "Tên nhà cung cấp không được để trống";
             }
             else if (string.IsNullOrEmpty(diachi))
             {
-                ViewData["Loi2"] = "Phải nhập địa chỉ nhà cung cấp";
+                ViewData["Loi"] = "Phải nhập địa chỉ nhà cung cấp";
             }
             else if (string.IsNullOrEmpty(sdt))
             {
-                ViewData["Loi3"] = "Số điện thoại không được để trống";
+                ViewData["Loi"] = "Số điện thoại không được để trống";
             }
             else
             {
@@ -346,15 +346,15 @@ namespace DoAnWeb.Controllers
             ncc.MaNCC = id;
             if (string.IsNullOrEmpty(tenncc))
             {
-                ViewData["Loi1"] = "Tên nhà cung cấp không được để trống";
+                ViewData["Loi"] = "Tên nhà cung cấp không được để trống";
             }
             else if (string.IsNullOrEmpty(diachi))
             {
-                ViewData["Loi2"] = "Phải nhập địa chỉ nhà cung cấp";
+                ViewData["Loi"] = "Phải nhập địa chỉ nhà cung cấp";
             }
             else if (string.IsNullOrEmpty(sdt))
             {
-                ViewData["Loi3"] = "Số điện thoại không được để trống";
+                ViewData["Loi"] = "Số điện thoại không được để trống";
             }
             else
             {
@@ -474,5 +474,35 @@ namespace DoAnWeb.Controllers
             db.SubmitChanges();
             return RedirectToAction("Khachhang");
         }
+
+        //Quản lý Đơn hàng
+        public ActionResult Donhang()
+        {
+            return View(db.tblDonHangs.ToList());
+        }
+        //[HttpGet]
+        //public ActionResult Suadonhang(string id)
+        //{
+        //    var donhang = db.tblDonHangs.First(m => m.MaDH == id);
+        //    return View(donhang);
+        //}
+        //[HttpPost]
+        //public ActionResult Suadonhang(string id, FormCollection collection)
+        //{
+        //    var donhang = db.tblDonHangs.First(m => m.MaDH == id);
+        //    var ngaylap = collection["NgayLap"];
+        //    donhang.MaDH = id;
+        //    if (string.IsNullOrEmpty(ngaylap))
+        //    {
+        //        ViewData["Loi"] = "Ngày lập không được để trống";
+        //    }
+        //    else
+        //    {
+        //        UpdateModel(donhang);
+        //        db.SubmitChanges();
+        //        return RedirectToAction("Donhang");
+        //    }
+        //    return this.Suadonhang(id);
+        //}
     }
 }
