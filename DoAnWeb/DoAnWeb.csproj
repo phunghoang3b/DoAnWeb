@@ -289,6 +289,7 @@
     <Content Include="Content\css\post.css" />
     <Content Include="Content\css\product.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\dangnhap.css" />
     <Content Include="Content\fonts\fontawesome\css\all.css" />
     <Content Include="Content\fonts\fontawesome\css\all.min.css" />
     <Content Include="Content\fonts\fontawesome\css\brands.css" />
@@ -1962,6 +1963,7 @@
     <Content Include="Content\Hinhsanpham\xone5.jpg" />
     <Content Include="Content\imagedetail\animation.gif" />
     <Content Include="Content\imagedetail\backgoundadmin.jpg" />
+    <Content Include="Content\imagedetail\backlogin.jpg" />
     <Content Include="Content\imagedetail\Loai1.jpg" />
     <Content Include="Content\imagedetail\Loai2.jpg" />
     <Content Include="Content\imagedetail\Loai3.jpg" />
@@ -2079,6 +2081,7 @@
     <Content Include="Content\js\jq.js" />
     <Content Include="Content\js\jquery-3.3.1.js" />
     <Content Include="Content\js\owl.js" />
+    <Content Include="Content\js\script.js" />
     <Content Include="Content\js\slider.js" />
     <Content Include="Content\js\vue.js" />
     <Content Include="Content\owlcarousel\assets\ajax-loader.gif" />
@@ -2093,6 +2096,7 @@
     <Content Include="Content\owlcarousel\owl.carousel.min.js" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\style.css" />
+    <Content Include="Content\video\introps5.mp4" />
     <Content Include="Content\video\video.mp4" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -2334,8 +2338,6 @@
     <Content Include="Views\GameProduct\Loaisp.cshtml" />
     <Content Include="Views\GameProduct\SPTheotheloai.cshtml" />
     <Content Include="Views\GameProduct\Details.cshtml" />
-    <Content Include="Views\Nguoidung\Dangky.cshtml" />
-    <Content Include="Views\Nguoidung\Dangnhap.cshtml" />
     <Content Include="Views\Giohang\GioHang.cshtml" />
     <Content Include="Views\Giohang\GiohangPartial.cshtml" />
     <Content Include="Views\Giohang\Dathang.cshtml" />
@@ -2369,6 +2371,8 @@
     <Content Include="Views\Admin\Suadonhang.cshtml" />
     <Content Include="Views\Post\page2.cshtml" />
     <Content Include="Views\Post\page3.cshtml" />
+    <Content Include="Views\Nguoidung\Dangnhap.cshtml" />
+    <Content Include="Views\Nguoidung\Dangky.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

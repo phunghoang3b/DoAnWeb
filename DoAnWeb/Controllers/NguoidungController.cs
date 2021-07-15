@@ -85,8 +85,8 @@ namespace DoAnWeb.Controllers
         public ActionResult Dangnhap(FormCollection collection)
         {
             //Gán các giá trị người dùng nhập liệu cho các biến
-            var tendn = collection["TenDN"];
-            var matkhau = collection["Matkhau"];
+            var tendn = collection["username"];
+            var matkhau = collection["password"];
             if (string.IsNullOrEmpty(tendn))
             {
                 ViewData["Loi1"] = "Phải nhập tên đăng nhập";

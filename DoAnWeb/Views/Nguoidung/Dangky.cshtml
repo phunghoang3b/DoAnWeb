@@ -1,82 +1,94 @@
 ﻿
 @{
-    ViewBag.Title = "Dangky";
-    Layout = "~/Views/Shared/_LayoutProduct.cshtml";
+    Layout = null;
 }
 
-<table align="center"
-        style="width: 45%;
-        left: 37%;
-        position: absolute;
-        top: 33%;
-        background-image: url('../../Content/images/xboxbnlog.jpg');
-        background-size: cover;
-        color: white;
-        font-weight:500;
-        border-radius: 10px;
-    ">
-    <h2 style="text-align:center; position:absolute; top:25%;left:50%;">Đăng Ký Thành viên</h2>
-    @using (Html.BeginForm())
-    {
-        @Html.ValidationSummary(true)
-        <tr style="height:40px;">
-            <td>Họ tên khách hàng:</td>
-            <td>
-                @Html.TextBox("HotenKH")
-                @ViewData["Loi1"]
-            </td>
-        </tr>
-        <tr style="height:40px">
-            <td>Tên đăng nhập:</td>
-            <td>
-                @Html.TextBox("TenDN")
-                @ViewData["Loi2"]
-            </td>
-        </tr>
-        <tr style="height:40px">
-            <td>Mật khẩu:</td>
-            <td>
-                @Html.Password("Matkhau")
-                @ViewData["Loi3"]
-            </td>
-        </tr>
-        <tr style="height:40px">
-            <td>Nhập lại mật khẩu:</td>
-            <td>
-                @Html.Password("Nhaplaimatkhau")
-                @ViewData["Loi4"]
-            </td>
-        </tr>
-        <tr style="height:40px">
-            <td>Email:</td>
-            <td>
-                @Html.TextBox("Email")
-                @ViewData["Loi5"]
-            </td>
-        </tr>
-        <tr style="height:40px">
-            <td>Địa chỉ:</td>
-            <td>
-                @Html.TextBox("Diachi")
-                @ViewData["Loi6"]
-            </td>
-        </tr>
-        <tr style="height:40px">
-            <td>Điện thoại:</td>
-            <td>
-                @Html.TextBox("Dienthoai")
-                @ViewData["Loi7"]
-            </td>
-        </tr>
-        <tr style="height:40px">
-            <td></td>
-            <td>
-                <input type="submit" name="Đăng ký" style="width:70px; border-radius: 5px; background-color: red; color: white; font-weight: bold; margin-left: 57px;"/>
-            </td>
-        </tr>
-    }
-</table>
-<div class="clear" style="margin-bottom: 200px;"></div>
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link href="~/Content/dangnhap.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="~/Content/video/introps5.mp4" type="video/mp4" />
+        </video>
+    </div>
+    <div class="cont">
+        <div class="form sign-in">
+            @using (Html.BeginForm("Dangnhap", "Nguoidung", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <h2>Đăng nhập</h2>
+                <label>
+                    <span>Tên đăng nhập</span>
+                    @ViewData["Loi1"]
+                    <input type="text" name="username">
+                </label>
+                <label>
+                    <span>Mật khẩu</span>
+                    @ViewData["Loi2"]
+                    <input type="password" name="password">
+                </label>
+                <button class="submit" type="submit">Đăng nhập</button>
+                <p class="forgot-pass">Quên mật khẩu ?</p>
+            }
+        </div>
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img-text m-up">
+                    <h2>Người mới ?</h2>
+                    <P>Đăng ký và tìm hiểu thêm về chúng tôi</P>
+                </div>
+                <div class="img-text m-in">
+                    <h2>Có tài khoản ?</h2>
+                    <P>Nếu đã có tài khoản, hãy đăng nhập. Chúng tôi luôn chào đón</P>
+                </div>
+                <div class="img-btn">
+                    <span class="m-up">Đăng Ký</span>
+                    <span class="m-in">Đăng Nhập</span>
+                </div>
+            </div>
+            <div class="form sign-up">
+                @using (Html.BeginForm("Dangky", "Nguoidung", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <label>
+                        <span>Họ tên</span>
+                        <input type="text" name="HotenKH">
+                    </label>
+                    <label>
+                        <span>Tên đăng nhập</span>
+                        <input type="text" name="TenDN">
+                    </label>
+                    <label>
+                        <span>Mật khẩu</span>
+                        <input type="password" name="Matkhau">
+                    </label>
+                    <label>
+                        <span>Xác nhận mật khẩu</span>
+                        <input type="password" name="Nhaplaimatkhau">
+                    </label>
+                    <label>
+                        <span>Email</span>
+                        <input type="text" name="Email">
+                    </label>
+                    <label>
+                        <span>Địa chỉ</span>
+                        <input type="text" name="Diachi">
+                    </label>
+                    <label>
+                        <span>Số điện thoại</span>
+                        <input type="text" name="Dienthoai">
+                    </label>
+                    <button type="submit" class="submit">Đăng ký ngay !</button>
+                }
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="~/Content/js/script.js"></script>
+</body>
+</html>
