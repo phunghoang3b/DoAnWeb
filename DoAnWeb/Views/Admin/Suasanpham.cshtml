@@ -7,20 +7,21 @@
 
 <h2 style="text-align:center">Chỉnh Sửa Thông Tin Sản Phẩm</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Suasanpham", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal" style="width:60%;margin-left:27.8%">
         <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @*@Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.MaSP)
         <div class="form-group">
             @Html.LabelFor(model => model.MaSP, new { @class = "control-label col-md-2" })
             <div class="col-md-10" style="width:42%">
                 <div style="font:18px;padding:5px 0 0 5px">@Model.MaSP</div>
             </div>
-        </div>
+        </div>*@
+        <input type="hidden" value="@Model.MaSP" name="MaSP"/>
         <div class="form-group">
             @Html.LabelFor(model => model.TenSP, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10" style="width:42%">
@@ -58,7 +59,6 @@
             <div class="col-md-10" style="width:42%">Chọn ảnh mới
                 <input type="file" name="fileupload"/>
                 <img src="@Url.Content("~/Content/Hinhsanpham/" + Model.HinhAnh)" width="120px"/> (Ảnh hiện tại)
-                @*thong bao trung*@
                 @ViewBag.Thongbao
             </div>
         </div>
@@ -66,7 +66,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.MoTa, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10" style="width:42%">
-                <textarea name="MoTa"> @Model.MoTa</textarea>
+                <textarea name="MoTa">@Html.Raw(HttpUtility.HtmlDecode(Model.MoTa))</textarea>
             </div>
         </div>
 

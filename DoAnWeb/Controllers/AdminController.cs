@@ -184,7 +184,7 @@ namespace DoAnWeb.Controllers
             if (fileupload == null)
             {
                 ViewBag.Thongbao = "Vui lòng chọn hình ảnh";
-                return View();
+                return View(sanpham);
             }
             //Them vao csdl
             else
@@ -205,7 +205,18 @@ namespace DoAnWeb.Controllers
                     }
                     sanpham.HinhAnh = fileName;
                     //luu vao csdl
-                    UpdateModel(sanpham);
+
+                    var sanpham1 = db.tblSanPhams.FirstOrDefault(p => p.MaSP.Equals(sanpham.MaSP));
+                    sanpham1.GiaTien = sanpham.GiaTien;
+                    sanpham1.HinhAnh = fileName;
+                    sanpham1.MaLoai = sanpham.MaLoai;
+                    sanpham1.MaNCC = sanpham.MaNCC;
+                    sanpham1.MaSP = sanpham.MaSP;
+                    sanpham1.MaTH = sanpham.MaTH;
+                    sanpham.MoTa = sanpham.MoTa;
+                    sanpham.NgayCapNhat = sanpham.NgayCapNhat;
+
+                    UpdateModel(sanpham1);
                     db.SubmitChanges();
                 }
                 return RedirectToAction("Sanpham");
