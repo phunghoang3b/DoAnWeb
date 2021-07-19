@@ -14,17 +14,17 @@ namespace DoAnWeb.Controllers
         dbQLBanGameDataContext db = new dbQLBanGameDataContext();
         public ActionResult Index()
         {
-            return View();
+            if (Session["Taikhoanadmin"] == null)
+                return RedirectToAction("Login", "Admin");
+            else
+                return View();
         }
         public ActionResult Sanpham(int? page)
         {
             int pageNumber = (page ?? 1);
             int pageSize = 7;
-            if (Session["Username"] == null)
-                return RedirectToAction("Login", "Admin");
-            else
-                //return View(db.tblSanPhams.ToList());
-                return View(db.tblSanPhams.ToList().OrderBy(n => n.MaSP).ToPagedList(pageNumber, pageSize));
+            //return View(db.tblSanPhams.ToList());
+            return View(db.tblSanPhams.ToList().OrderBy(n => n.MaSP).ToPagedList(pageNumber, pageSize));
         }
 
         [HttpGet]

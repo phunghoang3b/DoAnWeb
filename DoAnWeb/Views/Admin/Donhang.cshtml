@@ -5,53 +5,55 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Donhang</h2>
+<h2 style="text-align:center;margin-bottom:34px">Quản Lý Đơn Hàng</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.NgayLap)
+        <th style="border:1px solid;font-size: 15px;text-align: center;">
+            Ngày Lập
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NgayGiao)
+        <th style="border:1px solid;font-size: 15px;text-align: center;">
+            Ngày Giao
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Dathanhtoan)
+        <th style="border:1px solid;font-size: 15px;text-align: center;">
+            Đã Thanh Toán
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TinhTrangGiaoHang)
+        <th style="border:1px solid;font-size: 15px;text-align: center;">
+            Tình trạng giao hàng
         </th>
-        <th>
+        @*<th style="border:1px solid;font-size: 15px;text-align: center;">
             @Html.DisplayNameFor(model => model.Username)
+        </th>*@
+        <th style="border:1px solid;font-size: 15px;text-align: center;">
+            Chức năng
         </th>
-        <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.NgayLap)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NgayGiao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Dathanhtoan)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TinhTrangGiaoHang)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Username)
-        </td>
-        <td>
-            @Html.ActionLink("Sửa", "Suadonhang", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Xóa", "Xoadonhang", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model) {
+        <tr>
+            <td style="border:1px solid;text-align:center">
+                @Html.DisplayFor(modelItem => item.NgayLap)
+            </td>
+            <td style="border:1px solid;text-align:center">
+                @Html.DisplayFor(modelItem => item.NgayGiao)
+            </td>
+            <td style="border:1px solid;text-align:center">
+                @Html.DisplayFor(modelItem => item.Dathanhtoan)
+            </td>
+            <td style="border:1px solid;text-align:center">
+                @Html.DisplayFor(modelItem => item.TinhTrangGiaoHang)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>*@
+            <td style="border:1px solid;text-align:center">
+                @Html.ActionLink("Xóa", "Xoadonhang", new { id = item.MaDH })
+            </td>
+        </tr>
+    }
 
 </table>
+<p style="background-color:orange;border-radius:5px;font-size:17px;text-align:center;margin-left:45%;width:7%">
+    @Html.ActionLink("Thêm Mới", "Themdonhang", null, new { @class = "colortext" })
+    <style>a.colortext{text-decoration:none}</style>
+</p>
