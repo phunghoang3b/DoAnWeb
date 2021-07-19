@@ -1,9 +1,8 @@
-﻿@*@model IEnumerable<DoAnWeb.Models.tblSanPham>*@
-@using DoAnWeb.Models;
-@using PagedList.Mvc;
-@model PagedList.PagedList<tblSanPham>
+﻿@using DoAnWeb.Models;
+@*@using PagedList.Mvc;
+@model PagedList.PagedList<tblSanPham>*@
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Search";
     Layout = "~/Views/Shared/_LayoutProduct.cshtml";
 }
 
@@ -25,25 +24,25 @@
                     <div class="view-pro">
                         <p class="pull-right" style="padding-left: 170px;">15 reviews</p>
                     </div>
-                    <div class="ratings" style="margin-top:-40px; padding-left:15px;">                   
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>                
+                    <div class="ratings" style="margin-top:-40px; padding-left:15px;">
+                        <span class="fas fa-star"></span>
+                        <span class="fas fa-star"></span>
+                        <span class="fas fa-star"></span>
+                        <span class="fas fa-star"></span>
+                        <span class="fas fa-star"></span>
                     </div>
                 </a>
             </div>
         </div>
     }
 </div>
-<div class="MenuTrang" style="position:absolute;margin-left:20%; margin-top:-1%">
-    @Html.PagedListPager(Model,page=>Url.Action("Index", new { page = page}))
+@*<div class="MenuTrang" style="position:absolute;margin-left:20%; margin-top:-1%">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
 </div>
 <style>
-    .MenuTrang li{
-        display:inline;
+    .MenuTrang li {
+        display: inline;
     }
-</style>
+</style>*@
 <div class="space" style="margin-bottom:130px"></div>
 

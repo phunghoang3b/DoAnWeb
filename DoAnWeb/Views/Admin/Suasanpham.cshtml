@@ -13,14 +13,6 @@
     
     <div class="form-horizontal" style="width:60%;margin-left:27.8%">
         <hr />
-        @*@Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.MaSP)
-        <div class="form-group">
-            @Html.LabelFor(model => model.MaSP, new { @class = "control-label col-md-2" })
-            <div class="col-md-10" style="width:42%">
-                <div style="font:18px;padding:5px 0 0 5px">@Model.MaSP</div>
-            </div>
-        </div>*@
         <input type="hidden" value="@Model.MaSP" name="MaSP"/>
         <div class="form-group">
             @Html.LabelFor(model => model.TenSP, htmlAttributes: new { @class = "control-label col-md-2" })

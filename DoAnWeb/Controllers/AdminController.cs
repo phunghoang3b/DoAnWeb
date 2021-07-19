@@ -20,8 +20,11 @@ namespace DoAnWeb.Controllers
         {
             int pageNumber = (page ?? 1);
             int pageSize = 7;
-            //return View(db.tblSanPhams.ToList());
-            return View(db.tblSanPhams.ToList().OrderBy(n => n.MaSP).ToPagedList(pageNumber, pageSize));
+            if (Session["Username"] == null)
+                return RedirectToAction("Login", "Admin");
+            else
+                //return View(db.tblSanPhams.ToList());
+                return View(db.tblSanPhams.ToList().OrderBy(n => n.MaSP).ToPagedList(pageNumber, pageSize));
         }
 
         [HttpGet]

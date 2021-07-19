@@ -44,5 +44,19 @@ namespace DoAnWeb.Controllers
                        select g;
             return View(game.Single());
         }
+
+        public ActionResult Search()
+        {
+            var model = (from sp in data.tblSanPhams select sp).ToList();
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Search(string searchString)
+        {
+            var model = from sp in data.tblSanPhams select sp;
+            model = model.Where(tk => tk.TenSP.Contains(searchString));
+            return View(model);
+        }
     }
 }

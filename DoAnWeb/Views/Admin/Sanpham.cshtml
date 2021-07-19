@@ -77,8 +77,6 @@
 <p>
     @Html.ActionLink("Thêm Mới", "Themmoisanpham")
 </p>
-@*Tao lien ket cac trang*@
-@*Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount;*@
 <div class="MenuTrang">
     @Html.PagedListPager(Model, page => Url.Action("Sanpham", new { page = page}))
 </div>

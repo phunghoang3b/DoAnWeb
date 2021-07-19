@@ -2373,6 +2373,7 @@
     <Content Include="Views\Post\page3.cshtml" />
     <Content Include="Views\Nguoidung\Dangnhap.cshtml" />
     <Content Include="Views\Nguoidung\Dangky.cshtml" />
+    <Content Include="Views\GameProduct\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
