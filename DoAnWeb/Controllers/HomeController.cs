@@ -8,5 +8,9 @@ namespace DoAnWeb.Controllers
         {
             return View();
         }
+        public ActionResult Tutorial()
+        {
+            return View();
+        }
     }
 }
