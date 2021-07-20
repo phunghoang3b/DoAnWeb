@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<body>
+<body>   
     <!-- container -->
     <div class="container">
         <!-- menu top -->
@@ -199,6 +199,33 @@
             }
         </style>
         <div class="clear-space" style="margin-bottom: 25px;"></div>
+        <!-- Messenger Plugin chat Code -->
+        <div id="fb-root"></div>
+
+        <!-- Your Plugin chat code -->
+        <div id="fb-customer-chat" class="fb-customerchat">
+        </div>
+
+        <script>
+            var chatbox = document.getElementById('fb-customer-chat');
+            chatbox.setAttribute("page_id", "108738011460027");
+            chatbox.setAttribute("attribution", "page_inbox");
+
+            window.fbAsyncInit = function () {
+                FB.init({
+                    xfbml: true,
+                    version: 'v11.0'
+                });
+            };
+
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
         <!-- Regester end-->
         <div class="zalo-chat-widget" data-oaid="579745863508352884" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="320" data-height="390"></div>
         <!-- footer -->
@@ -417,7 +444,6 @@
         }
     </style>
     <!-- end container -->
-
     <!-- -->
     <!-- Glidejs Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
