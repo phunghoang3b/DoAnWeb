@@ -518,5 +518,11 @@ namespace DoAnWeb.Controllers
         //    }
         //    return this.Suadonhang(id);
         //}
+
+        //Quản lý chi tiết đơn hàng
+        public ActionResult Chitietdonhang()
+        {
+            return View(db.tblChiTietDonHangs.ToList());
+        }
     }
 }

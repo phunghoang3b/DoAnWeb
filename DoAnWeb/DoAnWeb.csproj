@@ -2377,6 +2377,7 @@
     <Content Include="Views\GameProduct\Search.cshtml" />
     <Content Include="Views\Home\Tutorial.cshtml" />
     <Content Include="Views\Tutorial\Index.cshtml" />
+    <Content Include="Views\Admin\Chitietdonhang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
