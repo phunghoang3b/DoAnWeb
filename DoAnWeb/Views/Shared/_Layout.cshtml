@@ -31,8 +31,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
 </head>
-<body>   
+<body>
     <!-- container -->
     <div class="container">
         <!-- menu top -->
@@ -113,20 +114,20 @@
                     <li class="header__nav-item">
                         @Html.Action("GiohangPartial", "Giohang")
                     </li>
-                    <!-- css start -->
-                    <style>
-                        a.colorTextAction {
-                            color: #FFF;
-                            text-decoration: none;
-                        }
-
-                            a.colorTextAction:hover {
-                                background-color: #FFF;
-                                color: #000;
-                            }
-                    </style>
-                    <!-- css end -->
                 </ul>
+                <!-- css start -->
+                <style>
+                    a.colorTextAction {
+                        color: #FFF;
+                        text-decoration: none;
+                    }
+
+                        a.colorTextAction:hover {
+                            background-color: #FFF;
+                            color: #000;
+                        }
+                </style>
+                <!-- css end -->
             </div>
         </div>
         @RenderBody()
@@ -196,35 +197,8 @@
             }
         </style>
         <div class="clear-space" style="margin-bottom: 25px;"></div>
-        <!-- Messenger Plugin chat Code -->
-        <div id="fb-root"></div>
-
-        <!-- Your Plugin chat code -->
-        <div id="fb-customer-chat" class="fb-customerchat">
-        </div>
-
-        <script>
-            var chatbox = document.getElementById('fb-customer-chat');
-            chatbox.setAttribute("page_id", "108738011460027");
-            chatbox.setAttribute("attribution", "page_inbox");
-
-            window.fbAsyncInit = function () {
-                FB.init({
-                    xfbml: true,
-                    version: 'v11.0'
-                });
-            };
-
-            (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </script>
         <!-- Regester end-->
-        <div class="zalo-chat-widget" data-oaid="579745863508352884" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="320" data-height="390"></div>
+        @*<div class="zalo-chat-widget" data-oaid="579745863508352884" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="320" data-height="390"></div>*@
         <!-- footer -->
         <footer>
             <div class="container">
@@ -478,5 +452,19 @@
             fadeOutSpeed: 500
         })
     </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/60f7c297649e0a0a5ccd36ac/1fb3t084m';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 </html>
