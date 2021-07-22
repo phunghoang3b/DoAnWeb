@@ -63,21 +63,21 @@
                     <option value="4">Đồ Công Nghệ</option>
                 </select>
                 @*@using (Ajax.BeginForm("Search", "GameProduct", new AjaxOptions { InsertionMode = InsertionMode.Replace, HttpMethod = "Get" }))
-                {*@
-                    <input type="text" name="searchkey" class="header__search-input" placeholder="Tìm kiếm tại đây...">
-                    <button type="submit" name="submit" class="header__search-btn">
-                        <div class="header__search-icon-wrap">
-                            <i class="fas fa-search header__search-icon"></i>
-                        </div>
-                    </button>
-                 @*}*@
+                    {*@
+                <input type="text" name="searchkey" class="header__search-input" placeholder="Tìm kiếm tại đây...">
+                <button type="submit" name="submit" class="header__search-btn">
+                    <div class="header__search-icon-wrap">
+                        <i class="fas fa-search header__search-icon"></i>
+                    </div>
+                </button>
+                @*}*@
 
                 @*@using (Html.BeginForm())
-                {
-                    <p>
-                        Title: @Html.TextBox("SearchString") <input type="submit" value="Tìm kiếm" />
-                    </p>
-                }*@
+                    {
+                        <p>
+                            Title: @Html.TextBox("SearchString") <input type="submit" value="Tìm kiếm" />
+                        </p>
+                    }*@
             </div>
             <div class="col-md-2 header__call">
                 <div class="header__call-icon-wrap">
@@ -142,9 +142,9 @@
         </div>
         @*<div class="row backroud">*@
         @*<div class="col-md-3">*@
-            <div id="list-example" class="list-group">
-                @Html.Action("Loaisp", "GameProduct")
-                @*<a class="list-group-item list-group-item-action" href="#list-item-1">
+        <div id="list-example" class="list-group">
+            @Html.Action("Loaisp", "GameProduct")
+            @*<a class="list-group-item list-group-item-action" href="#list-item-1">
                     <svg class="menu__item-icon" id="Capa_1" enable-background="new 0 0 512 512" height="15" viewBox="0 0 512 512" width="15"><g><i class="fab fa-playstation"></i></g></svg>
                     <span class="text-2">PlayStation 5</span>
                 </a>
@@ -184,7 +184,7 @@
                     <svg class="menu__item-icon" id="Capa_1" enable-background="new 0 0 512 512" height="15" viewBox="0 0 512 512" width="15"><g><i class="fas fa-tools"></i></g></svg>
                     <span class="text-2">Sửa Chữa</span>
                 </a>*@
-            </div>
+        </div>
         @*</div>*@
         @*</div>*@
         @RenderBody()
@@ -255,7 +255,7 @@
         </style>
         <div class="clear-space" style="margin-bottom: 25px;"></div>
         <!-- Regester end-->
-        <div class="zalo-chat-widget" data-oaid="579745863508352884" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="320" data-height="390"></div>
+        @*<div class="zalo-chat-widget" data-oaid="579745863508352884" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="320" data-height="390"></div>*@
         <!-- footer -->
         <footer>
             <div class="container">
@@ -451,63 +451,77 @@
         </style>
         <!-- end footer -->
     </div>
-        <div class="container">
-            <div class="main"></div>
-        </div>
-        <div id="go-top"><i class="fas fa-arrow-up"></i></div>
-        <style>
-            #go-top {
-                display: none;
-                font-size: 25px;
-                position: fixed;
-                bottom: 70px;
-                right: 50px;
-                border: 2px solid #000;
-                border-radius: 5px;
-                width: 30px;
-                height: 30px;
-                line-height: 25px;
-                text-align: center;
-                cursor: pointer;
-            }
-        </style>
-        <!-- end container -->
-        <!-- -->
-        <!-- Glidejs Script -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
-        <script src="~/Content/js/slider.js"></script>
-        <script>
-            (function ($, window, document) {
-                $.fn.goTop = function (options) {
-                    var defaults = {
-                        scrollTop: 100,
-                        scrollSpeed: 1000,
-                        fadeInSpeed: 1000,
-                        fadeOutSpeed: 500
-                    };
+    <div class="container">
+        <div class="main"></div>
+    </div>
+    <div id="go-top"><i class="fas fa-arrow-up"></i></div>
+    <style>
+        #go-top {
+            display: none;
+            font-size: 25px;
+            position: fixed;
+            bottom: 70px;
+            right: 50px;
+            border: 2px solid #000;
+            border-radius: 5px;
+            width: 30px;
+            height: 30px;
+            line-height: 25px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+    <!-- end container -->
+    <!-- -->
+    <!-- Glidejs Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+    <script src="~/Content/js/slider.js"></script>
+    <script>
+        (function ($, window, document) {
+            $.fn.goTop = function (options) {
+                var defaults = {
+                    scrollTop: 100,
+                    scrollSpeed: 1000,
+                    fadeInSpeed: 1000,
+                    fadeOutSpeed: 500
+                };
 
-                    var options = $.extend(defaults, options);
-                    var $this = $(this);
-                    $(window).on('scroll', function () {
-                        if ($(window).scrollTop() > options.scrollTop) {
-                            $this.fadeIn(options.fadeInSpeed);
-                        } else {
-                            $this.fadeOut(options.fadeOutSpeed);
-                        }
-                    })
-                    $this.on('click', function () {
-                        $('html,body').animate({
-                            'scrollTop': 0
-                        }, options.speed)
-                    })
-                }
-            })(jQuery, window, document)
-            $('#go-top').goTop({
-                scrollTop: 100,
-                scrollSpeed: 1000,
-                fadeInSpeed: 1000,
-                fadeOutSpeed: 500
-            })
-        </script>
+                var options = $.extend(defaults, options);
+                var $this = $(this);
+                $(window).on('scroll', function () {
+                    if ($(window).scrollTop() > options.scrollTop) {
+                        $this.fadeIn(options.fadeInSpeed);
+                    } else {
+                        $this.fadeOut(options.fadeOutSpeed);
+                    }
+                })
+                $this.on('click', function () {
+                    $('html,body').animate({
+                        'scrollTop': 0
+                    }, options.speed)
+                })
+            }
+        })(jQuery, window, document)
+        $('#go-top').goTop({
+            scrollTop: 100,
+            scrollSpeed: 1000,
+            fadeInSpeed: 1000,
+            fadeOutSpeed: 500
+        })
+    </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/60f7c297649e0a0a5ccd36ac/1fb3t084m';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 </html>

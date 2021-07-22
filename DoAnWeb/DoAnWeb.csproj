@@ -2379,6 +2379,12 @@
     <Content Include="Views\Tutorial\Index.cshtml" />
     <Content Include="Views\Admin\Chitietdonhang.cshtml" />
     <Content Include="Views\Tutorial\Tuto1.cshtml" />
+    <Content Include="Views\Tutorial\Tuto2.cshtml" />
+    <Content Include="Views\Tutorial\Tuto3.cshtml" />
+    <Content Include="Views\Tutorial\Tuto6.cshtml" />
+    <Content Include="Views\Tutorial\Tuto4.cshtml" />
+    <Content Include="Views\Tutorial\Tuto5.cshtml" />
+    <Content Include="Views\Tutorial\Tuto7.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
