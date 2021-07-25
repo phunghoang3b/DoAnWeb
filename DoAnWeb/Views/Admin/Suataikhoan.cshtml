@@ -5,41 +5,60 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Suataikhoan</h2>
+<h2 style="text-align:center">Sửa Tài Khoản</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-        <h4>tblTaiKhoan</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Username)
 
-        <div class="form-group">
+        <div class="form-group" style="margin-left:12%">
+            @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10" style="width:52%">
+                <div style="font:18px;padding: 5px 0 0 5px">@Model.Username</div>
+            </div>
+        </div>
+
+        <div class="form-group" style="margin-left:12%">
             @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10" style="width:52%">
                 @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" style="margin-left:12%">
             @Html.LabelFor(model => model.MaLoaiTK, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10" style="width:52%">
                 @Html.DropDownList("MaLoaiTK")
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Lưu Lại" class="btn btn-default" style="margin-left:30%"/>
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Taikhoan")
+<div class="img-tk">
+    <img src="~/Content/imagedetail/tkimg.jpg" style="position: absolute; width: 40%;" />
+</div>
+<div style="background-color: #ABBAC3; position: absolute; margin-left: 48.9%; top: 75.1%; width: 7%; height: 13%; ">
+    @Html.ActionLink("Trở Về", "Taikhoan", null, new { @class = "textnone" })
+    <style>
+        a.textnone {
+            font-size: 14px;
+            color: white;
+            margin-left: 25px;
+            margin-top: 10px;
+            position: absolute;
+            text-decoration: none;
+        }
+    </style>
 </div>
