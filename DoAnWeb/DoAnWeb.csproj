@@ -2389,6 +2389,9 @@
     <Content Include="Views\Tutorial\Tuto9.cshtml" />
     <Content Include="Views\Tutorial\Tuto10.cshtml" />
     <Content Include="Views\Tutorial\Tuto11.cshtml" />
+    <Content Include="Views\Admin\Taikhoan.cshtml" />
+    <Content Include="Views\Admin\Themmoitaikhoan.cshtml" />
+    <Content Include="Views\Admin\Suataikhoan.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

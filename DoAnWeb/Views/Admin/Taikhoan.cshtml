@@ -1,0 +1,48 @@
+﻿@model IEnumerable<DoAnWeb.Models.tblTaiKhoan>
+
+@{
+    ViewBag.Title = "Taikhoan";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="text-align:center">Quản Lý Tài Khoản</h2>
+
+<table class="table" style="width: 39%; margin-left: 398px; margin-top: 30px;">
+    <tr>
+        <th style="border:1px solid;text-align:center">
+            Tên Đăng Nhập
+        </th>
+        <th style="border:1px solid;text-align:center">
+            Mật Khẩu
+        </th>
+        <th style="border:1px solid;text-align:center">
+            Mã Loại Tài Khoản
+        </th>
+        <th style="border:1px solid;text-align:center">
+            Chức Năng
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td style="border:1px solid;text-align:center">
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td style="border:1px solid;text-align:center">
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td style="border:1px solid;text-align:center">
+            @Html.DisplayFor(modelItem => item.MaLoaiTK)
+        </td>
+        <td style="border:1px solid;text-align:center">
+            @Html.ActionLink("Sửa", "Suataikhoan", new { id=item.Username }) |
+            @Html.ActionLink("Xóa", "Xoataikhoan", new { id=item.Username })
+        </td>
+    </tr>
+}
+
+</table>
+<p style="background-color:orange;border-radius:5px;font-size:17px;text-align:center;    margin-left: 46.5%;;width:7%">
+    @Html.ActionLink("Thêm Mới", "Themmoitaikhoan", null, new { @class = "colortext" })
+    <style>a.colortext{text-decoration:none}</style>
+</p>

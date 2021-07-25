@@ -110,5 +110,10 @@ namespace DoAnWeb.Controllers
             }
             return View();
         }
+        public ActionResult Dangxuat()
+        {
+            Session.Remove("Username");
+            return RedirectToAction("Index", "GameProduct");
+        }
     }
 }

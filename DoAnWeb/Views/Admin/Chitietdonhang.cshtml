@@ -47,9 +47,7 @@
             @Html.DisplayFor(modelItem => item.DonGia)
         </td>
         <td style="border:1px solid;text-align:center">
-            @Html.ActionLink("Edit", "Edit", new { id = item.MaDH }) |
-            @Html.ActionLink("Details", "Details", new { id = item.MaDH }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.MaDH })
+            @Html.ActionLink("Xóa", "Xoachitietdonhang", new { id = item.MaDH })
         </td>
     </tr>
 }

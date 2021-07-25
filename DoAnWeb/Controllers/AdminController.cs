@@ -494,35 +494,59 @@ namespace DoAnWeb.Controllers
         {
             return View(db.tblDonHangs.ToList());
         }
-        //[HttpGet]
-        //public ActionResult Suadonhang(string id)
-        //{
-        //    var donhang = db.tblDonHangs.First(m => m.MaDH == id);
-        //    return View(donhang);
-        //}
-        //[HttpPost]
-        //public ActionResult Suadonhang(string id, FormCollection collection)
-        //{
-        //    var donhang = db.tblDonHangs.First(m => m.MaDH == id);
-        //    var ngaylap = collection["NgayLap"];
-        //    donhang.MaDH = id;
-        //    if (string.IsNullOrEmpty(ngaylap))
-        //    {
-        //        ViewData["Loi"] = "Ngày lập không được để trống";
-        //    }
-        //    else
-        //    {
-        //        UpdateModel(donhang);
-        //        db.SubmitChanges();
-        //        return RedirectToAction("Donhang");
-        //    }
-        //    return this.Suadonhang(id);
-        //}
 
         //Quản lý chi tiết đơn hàng
         public ActionResult Chitietdonhang()
         {
             return View(db.tblChiTietDonHangs.ToList());
+        }
+
+        //public ActionResult Xoachitietdonhang(string id)
+        //{
+        //    var ct = (from s in db.tblChiTietDonHangs where s.MaSP == id select s).Single();
+        //    db.tblChiTietDonHangs.DeleteOnSubmit(ct);
+        //    db.SubmitChanges();
+        //    return RedirectToAction("Chitietdonhang", "Admin");
+        //}
+
+        //QL Tai khoan
+        public ActionResult Taikhoan()
+        {
+            return View(db.tblTaiKhoans.ToList());
+        }
+        [HttpGet]
+        public ActionResult Themmoitaikhoan()
+        {
+            ViewBag.MaLoaiTK = new SelectList(db.tblLoaiTaiKhoans.ToList().OrderBy(n => n.ChucVu), "MaLoaiTK", "ChucVu");
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Themmoitaikhoan(tblTaiKhoan tk)
+        {
+            ViewBag.MaLoaiTK = new SelectList(db.tblLoaiTaiKhoans.ToList().OrderBy(n => n.ChucVu), "MaLoaiTK", "ChucVu");
+            db.tblTaiKhoans.InsertOnSubmit(tk);
+            db.SubmitChanges();
+            return RedirectToAction("Taikhoan");
+        }
+        public ActionResult Suataikhoan(string id)
+        {
+            var taikhoan = db.tblTaiKhoans.SingleOrDefault(n => n.Username == id);
+            if (taikhoan == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            ViewBag.MaLoaiTK = new SelectList(db.tblLoaiTaiKhoans.ToList().OrderBy(n => n.ChucVu), "MaLoaiTK", "ChucVu");
+            return View(taikhoan);
+        }
+        [HttpPost]
+        public ActionResult Suataikhoan(string id, tblTaiKhoan tk)
+        {
+            ViewBag.MaLoaiTK = new SelectList(db.tblLoaiTaiKhoans.ToList().OrderBy(n => n.ChucVu), "MaLoaiTK", "ChucVu");
+            var taikhoan = db.tblTaiKhoans.FirstOrDefault(p => p.Username.Equals(tk.Username));
+            UpdateModel(taikhoan);
+            db.SubmitChanges();
+            return RedirectToAction("Taikhoan");
         }
     }
 }
