@@ -501,14 +501,6 @@ namespace DoAnWeb.Controllers
             return View(db.tblChiTietDonHangs.ToList());
         }
 
-        //public ActionResult Xoachitietdonhang(string id)
-        //{
-        //    var ct = (from s in db.tblChiTietDonHangs where s.MaSP == id select s).Single();
-        //    db.tblChiTietDonHangs.DeleteOnSubmit(ct);
-        //    db.SubmitChanges();
-        //    return RedirectToAction("Chitietdonhang", "Admin");
-        //}
-
         //QL Tai khoan
         public ActionResult Taikhoan()
         {
