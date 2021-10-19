@@ -1,43 +1,21 @@
-# ASP.NET
-# Build and test ASP.NET projects.
-# Add steps that publish symbols, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
 
 trigger:
-- master
+- main
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: ubuntu-latest
 
-variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+container: mcr.microsoft.com/dotnet/sdk:5.0
 
 steps:
-- task: NuGetToolInstaller@1
-
-- task: NuGetCommand@2
+- task: DotNetCoreCLI@2
   inputs:
-    restoreSolution: '$(solution)'
-
-- task: VSBuild@1
+    command: build
+- task: DotNetCoreCLI@2
   inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: PublishSymbols@1
-  displayName: 'Publish symbols path: '
-  inputs:
-    SearchPattern: '**\bin\**\*.pdb'
-  continueOnError: true
-
-- task: CopyFiles@1
-  displayName: 'Copy'
+    command: 'test'
+    projects: '**/*Tests*.csproj'
