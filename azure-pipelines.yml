@@ -17,5 +17,8 @@ steps:
     command: build
 - task: DotNetCoreCLI@2
   inputs:
-    command: 'test'
-    projects: '**/*Tests*.csproj'
+    command: build
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'test'
+        projects: '**/*Test*.csproj'
